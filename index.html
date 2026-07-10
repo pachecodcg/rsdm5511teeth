@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSDM 5511 &middot; Properties of Dental Hard Tissues</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+:root{--au-navy:#003359;--au-navy-deep:#002240;--au-navy-mid:#0a4a75;--au-navy-soft:#336685;--ink:#003359;--ink-mid:#58676e;--ink-soft:#8b949a;--paper:#FFFFFF;--paper-tint:#EEEEEE;--line:#e0e4e6;--surface-card:#FFFFFF;--surface-muted:#f0f2f3;--au-green:#44D62C;--au-green-deep:#38b024;--au-green-pale:#d9f5d5;--au-gray:#A5ACAF;--au-gray-mid:#8b949a;--au-gray-pale:#c5cacc;--spring:cubic-bezier(.5,1.5,.4,1)}
+body.dark{--ink:#FFFFFF;--ink-mid:#A5ACAF;--ink-soft:#6F7679;--paper:#002240;--paper-tint:#001a30;--line:#0a4a75;--surface-card:#00304f;--surface-muted:rgba(165,172,175,0.12);background:#001423}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;background:var(--au-navy-deep)}
+.deck{position:relative;width:100vw;height:100vh;overflow:hidden}
+.slide{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;visibility:hidden;opacity:0;pointer-events:none;z-index:1;overflow-y:auto;background:radial-gradient(120% 90% at 50% 0%,#FFFFFF 0%,#F3F4F5 55%,#EEEEEE 100%)}
+body.dark .slide{background:radial-gradient(120% 90% at 50% 0%,#003354 0%,#001d34 55%,#001423 100%)}
+.slide.prev{visibility:visible;opacity:1;pointer-events:none;z-index:2}
+.slide.active{visibility:visible;opacity:1;pointer-events:auto;z-index:3;transition:opacity .5s ease}
+.slide.entering{opacity:0}
+.slide-inner{width:100%;height:100%;max-width:1180px;margin:0 auto;padding:54px 80px 84px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.slide-inner.ctr{align-items:center;text-align:center}
+.chrome-top{position:absolute;top:0;left:0;right:0;height:6px;background:var(--au-green);z-index:5}
+.event-ribbon{position:absolute;top:26px;right:48px;font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:.22em;color:var(--ink-soft);font-weight:600;text-transform:uppercase;padding-right:clamp(44px,5vw,60px)}
+.event-ribbon .dot{display:inline-block;width:5px;height:5px;background:var(--au-green);border-radius:50%;margin:0 10px;vertical-align:middle}
+
+.slide.title-slide{background:var(--paper-tint)}
+body.dark .slide.title-slide{background:var(--paper)}
+.title-slide .slide-inner{padding:72px 110px}
+.title-kicker{font-family:"Source Sans 3",sans-serif;font-style:italic;font-size:clamp(16px,1.7vw,20px);color:var(--ink);letter-spacing:.02em;font-weight:400;margin-bottom:26px;display:flex;align-items:center;gap:16px}
+.title-kicker::before{content:"";width:56px;height:2px;background:var(--au-green);display:inline-block}
+.title-slide h1{font-family:"Montserrat",sans-serif;font-size:clamp(46px,6vw,92px);font-weight:700;line-height:.98;color:var(--ink);letter-spacing:-.025em;margin-bottom:16px}
+.title-slide h1 .sub{display:block;font-size:.3em;font-weight:500;color:var(--au-navy-mid);letter-spacing:-.005em;margin-top:16px;line-height:1.2}
+body.dark .title-slide h1 .sub{color:var(--au-navy-soft)}
+.title-credentials{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);display:flex;gap:52px;flex-wrap:wrap}
+.tc-block{display:flex;flex-direction:column;gap:6px}
+.tc-label{font-family:"Montserrat",sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:var(--ink-soft);font-weight:600}
+.tc-value{font-size:16px;color:var(--ink);font-weight:500}.tc-value.bold{font-weight:700}
+
+.kicker{font-family:"Montserrat",sans-serif;font-size:11px;letter-spacing:.22em;color:var(--au-green-deep);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.kicker::before{content:"";width:36px;height:2px;background:var(--au-green)}
+.kicker.ctr{justify-content:center}.kicker.ctr::after{content:"";width:36px;height:2px;background:var(--au-green)}
+.kicker .kt{color:var(--ink-soft)}
+body.dark .kicker{color:var(--au-green)}
+.c-title{font-family:"Montserrat",sans-serif;font-size:clamp(30px,3.8vw,46px);font-weight:700;color:var(--ink);line-height:1.05;letter-spacing:-.02em;margin-bottom:14px}
+.c-title em{font-family:"Source Sans 3",sans-serif;font-style:italic;font-weight:300;color:var(--au-navy-mid)}
+.c-lead{font-size:clamp(15px,1.6vw,18px);color:var(--ink-mid);line-height:1.5;max-width:820px;font-weight:400;margin-bottom:20px}
+.c-lead strong{color:var(--ink);font-weight:700}
+
+.panel{background:rgba(255,255,255,.66);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.7);border-radius:24px;box-shadow:0 22px 60px rgba(0,30,54,.12),inset 0 1px 0 rgba(255,255,255,.65);padding:24px}
+body.dark .panel{background:rgba(0,45,72,.5);border-color:rgba(255,255,255,.08);box-shadow:0 22px 60px rgba(0,0,0,.4)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.nots{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
+.not{font-family:"Montserrat",sans-serif;font-size:clamp(13px,1.5vw,16px);font-weight:600;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.22);border-radius:100px;padding:9px 20px}
+.not s{text-decoration-color:var(--au-green);text-decoration-thickness:2px}
+.spine{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 14px}
+.sp{font-family:"Montserrat",sans-serif;font-size:clamp(13px,1.5vw,16px);font-weight:700;color:#fff;background:var(--au-navy);border-radius:100px;padding:9px 22px}
+.sp-arw{color:var(--au-green-deep);font-family:"Montserrat",sans-serif;font-weight:800;font-size:17px}
+.flip-card{height:250px;perspective:1500px;cursor:pointer}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .65s var(--spring);transform-style:preserve-3d}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:22px;overflow:hidden}
+.flip-front{background:var(--au-navy);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px;box-shadow:0 14px 36px rgba(0,30,54,.18)}
+.flip-front::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--au-green)}
+.ff-title{font-family:"Montserrat",sans-serif;font-size:clamp(24px,2.8vw,32px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.05}
+.ff-tag{font-family:"Montserrat",sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--au-green);margin-top:12px}
+.ff-hint{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:11.5px;color:rgba(255,255,255,.5);font-style:italic}
+.flip-back{transform:rotateY(180deg);background:var(--surface-card);border:1px solid var(--line);padding:24px;box-shadow:0 10px 30px rgba(0,30,54,.07)}
+.flip-back::before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+.fc-a .flip-back::before{background:var(--ink)}
+.fc-b .flip-back::before{background:var(--au-navy-soft)}
+.fb-head{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:12px}
+.map{display:grid;grid-template-columns:1fr auto 1fr;align-items:baseline;column-gap:14px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.map:first-of-type{border-top:none}
+.map .k{text-align:right;color:var(--ink-soft)}
+.map .arw{color:var(--au-green-deep);font-weight:800;font-family:"Montserrat",sans-serif;font-size:15px}
+.map .v{text-align:left;color:var(--ink);font-weight:700;font-family:"Montserrat",sans-serif}
+.fb-note{margin-top:13px;font-size:12.5px;color:var(--ink-soft);line-height:1.45}
+.fb-note b{color:var(--ink);font-weight:700}
+.flip-ic{position:absolute;top:15px;right:16px;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.2s}
+.flip-front .flip-ic{background:rgba(255,255,255,.14);color:rgba(255,255,255,.75)}
+.flip-back .flip-ic{background:var(--surface-muted);color:var(--ink-soft)}
+.flip-card:hover .flip-front .flip-ic{background:rgba(68,214,44,.28);color:#fff}
+.flip-card:hover .flip-back .flip-ic{background:var(--au-green-pale);color:var(--au-green-deep)}
+.flip-ic svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.num{font-family:"Montserrat",sans-serif;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.gm{color:var(--au-green-deep)}body.dark .gm{color:var(--au-green)}
+
+.slide--navy{background:linear-gradient(155deg,#0a4a75 0%,#003359 55%,#002240 100%)}
+body.dark .slide--navy{background:linear-gradient(155deg,#012a44 0%,#001a30 60%,#000d18 100%)}
+.sec-num{font-family:"Montserrat",sans-serif;font-size:clamp(60px,11vw,140px);font-weight:800;line-height:.9;letter-spacing:-.04em;color:rgba(68,214,44,.9);margin-bottom:10px}
+.sec-kick{font-family:"Montserrat",sans-serif;font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--au-green);font-weight:700;margin-bottom:16px}
+.sec-title{font-family:"Montserrat",sans-serif;font-size:clamp(32px,5vw,60px);font-weight:700;color:#fff;line-height:1.02;letter-spacing:-.025em;max-width:900px}
+.sec-title em{font-family:"Source Sans 3",sans-serif;font-style:italic;font-weight:300;color:rgba(255,255,255,.72)}
+.sec-sub{color:rgba(255,255,255,.7);font-size:clamp(15px,1.7vw,19px);margin-top:18px;max-width:720px;line-height:1.5}
+
+.tissue{background:var(--surface-card);border:1px solid var(--line);border-radius:20px;padding:22px;position:relative;overflow:hidden}
+body.dark .tissue{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+.tissue::before{content:"";position:absolute;top:0;left:0;right:0;height:4px}
+.tissue.en::before{background:var(--ink)}.tissue.de::before{background:var(--au-navy-soft)}
+.t-name{font-family:"Montserrat",sans-serif;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.t-tag{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px;display:block;margin-bottom:16px}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+body.dark .kv{border-color:rgba(165,172,175,.14)}
+.kv:first-of-type{border-top:none}
+.kv .k{color:var(--ink-soft)}.kv .v{color:var(--ink);font-weight:600;text-align:right;font-family:"Montserrat",sans-serif}
+
+.callout{display:flex;gap:13px;align-items:flex-start;background:var(--au-navy);border-radius:16px;padding:15px 20px;margin-top:16px}
+body.dark .callout{background:#000d18}
+.callout .cl{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--au-green);margin-bottom:5px}
+.callout .ct{font-size:clamp(14px,1.5vw,16px);color:rgba(255,255,255,.9);line-height:1.55}
+.callout .ct b{color:#fff;font-weight:600}.callout .ct em{color:var(--au-green);font-style:normal;font-weight:600}
+.src{color:var(--ink-soft);font-size:12px;margin-top:12px;max-width:960px}
+.myth{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.myth-card{border-radius:18px;padding:24px 26px 22px;border:1px solid var(--line)}
+.myth-card .ml{font-family:"Montserrat",sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.myth-card .mh{font-family:"Montserrat",sans-serif;font-weight:800;font-size:22px;letter-spacing:-.01em;margin-bottom:12px}
+.myth-card .mp{font-size:14.5px;line-height:1.45;color:var(--ink-mid);padding:8px 0;border-top:1px solid var(--line)}
+.myth-card .mp:first-of-type{border-top:none;padding-top:2px}
+.assume{background:var(--surface-muted)}
+.assume .ml{color:var(--ink-soft)}
+.assume .mh{color:var(--ink-mid)}
+.real{background:var(--surface-card);border-left:4px solid var(--au-green);box-shadow:0 14px 40px rgba(0,30,54,.10)}
+.real .ml{color:var(--au-green-deep)}
+.real .mh{color:var(--au-navy)}
+body.dark .real{background:var(--surface-card)}
+body.dark .real .mh{color:#fff}
+.mm-catch{margin-top:18px;font-size:15px;color:var(--ink-mid);line-height:1.55;max-width:1060px}
+.mm-catch b{font-family:"Montserrat",sans-serif;color:var(--au-navy);font-weight:700}
+.mm-catch em{color:var(--au-green-deep);font-style:normal;font-weight:600}
+body.dark .mm-catch b{color:#fff}
+body.dark .mm-catch em{color:var(--au-green)}
+.mm-catch b{font-family:"Montserrat",sans-serif;color:var(--au-navy);font-weight:700}
+.mm-catch em{color:var(--au-green-deep);font-style:normal;font-weight:600}
+body.dark .mm-catch b{color:#fff}
+body.dark .mm-catch em{color:var(--au-green)}
+.closing-kicker{font-family:"Montserrat",sans-serif;font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--au-green);display:flex;align-items:center;gap:16px;margin-bottom:36px}
+.closing-kicker::before{content:"";width:48px;height:2px;background:var(--au-green)}
+.closing-title{font-family:"Montserrat",sans-serif;font-size:clamp(54px,7.5vw,104px);font-weight:700;letter-spacing:-.03em;line-height:.95;color:#fff}
+.closing-line{width:64px;height:3px;background:var(--au-green);margin:32px 0 0}
+.closing-meta{display:flex;gap:64px;flex-wrap:wrap;margin-top:36px}
+.cm-block{display:flex;flex-direction:column;gap:5px}
+.cm-label{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--au-green)}
+.cm-value{font-family:"Source Sans 3",sans-serif;font-size:16px;font-weight:500;color:rgba(255,255,255,.92)}
+
+.obj-sec{font-family:"Montserrat",sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--au-green-deep);margin:12px 0 5px}
+body.dark .obj-sec{color:var(--au-green)}
+.obj-sec:first-child{margin-top:0}
+.obj{display:flex;gap:14px;align-items:flex-start;padding:9px 10px;margin:0 -10px 3px;border-radius:12px;transition:background .2s}
+.obj[data-goto]{cursor:pointer}
+.obj[data-goto]:hover{background:var(--surface-muted)}
+.obj-badge{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:3px;width:34px}
+.obj-num{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:"Montserrat",sans-serif;font-weight:800;font-size:15px;color:#fff;box-shadow:0 3px 8px rgba(0,30,54,.16)}
+.obj-tier{font-family:"Montserrat",sans-serif;font-size:7px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.obj.must .obj-num{background:var(--au-green-deep)}.obj.must .obj-tier{color:var(--au-green-deep)}
+.obj.good .obj-num{background:var(--au-navy)}.obj.good .obj-tier{color:var(--au-navy)}
+.obj.nice .obj-num{background:var(--au-gray-mid)}.obj.nice .obj-tier{color:var(--au-gray-mid)}
+body.dark .obj.good .obj-num{background:var(--au-navy-soft)}body.dark .obj.good .obj-tier{color:var(--au-navy-soft)}
+body.dark .obj.must .obj-num{background:var(--au-green-deep)}body.dark .obj.must .obj-tier{color:var(--au-green)}
+.obj-text{flex:1;font-size:clamp(13px,1.4vw,15px);color:var(--ink-mid);line-height:1.45}
+.obj-text .ov{font-weight:700;color:var(--ink)}
+.obj-legend{display:inline-flex;align-items:center;gap:15px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+.obj-legend .li{display:flex;align-items:center;gap:6px}
+.obj-legend .ld{width:11px;height:11px;border-radius:4px;flex-shrink:0}
+.ld-must{background:var(--au-green-deep)}.ld-good{background:var(--au-navy)}.ld-nice{background:var(--au-gray-mid)}
+body.dark .ld-good{background:var(--au-navy-soft)}
+
+.road{display:flex;gap:16px;align-items:center;padding:11px 16px;border-radius:14px;background:var(--surface-muted);margin-bottom:9px}
+.road .rn{font-family:"Montserrat",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--au-green-deep);min-width:66px}
+body.dark .road .rn{color:var(--au-green)}
+.road .rt{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--ink);font-size:15.5px}
+.road .rd{color:var(--ink-soft);font-size:13.5px;margin-left:auto;text-align:right}
+
+.dsheet{width:100%;border-collapse:collapse;font-size:clamp(12.5px,1.35vw,15px)}
+.dsheet th{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);text-align:left;padding:0 14px 10px;border-bottom:2px solid var(--au-green)}
+.dsheet th.rt,.dsheet td.rt{text-align:right}
+.dsheet td{padding:8px 14px;border-bottom:1px solid var(--line);color:var(--ink-mid);vertical-align:top}
+body.dark .dsheet td{border-color:rgba(165,172,175,.13)}
+.dsheet td.p{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--ink)}
+.dsheet td.val{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--ink);white-space:nowrap}
+.dsheet td.m{font-size:12px;color:var(--ink-soft)}
+.dsheet tr:hover td{background:var(--surface-muted)}
+.feat{display:flex;gap:9px;flex-wrap:wrap;margin-top:6px}
+.fchip{background:var(--surface-muted);border-radius:100px;padding:8px 15px;font-size:13.5px;color:var(--ink-mid)}
+.fchip b{font-family:"Montserrat",sans-serif;font-weight:600;color:var(--ink);font-size:13.5px}
+
+/* composition chart */
+.comp-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:16px}
+.comp-legend{display:flex;gap:18px;flex-wrap:wrap}
+.comp-lg{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-mid)}
+.comp-lg .sw{width:13px;height:13px;border-radius:4px}
+.comp-lg b{font-family:"Montserrat",sans-serif;font-weight:600;color:var(--ink);font-size:13.5px}
+.sw-m{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}.sw-o{background:var(--au-green-deep)}.sw-w{background:var(--au-navy)}
+body.dark .sw-w{background:var(--au-navy-soft)}
+.comp-ctl{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;background:var(--surface-muted);border-radius:11px;padding:4px}
+.comp-thumb{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px)/2);background:var(--surface-card);border-radius:8px;box-shadow:0 3px 8px rgba(0,30,54,.15);transition:transform .4s var(--spring)}
+body.dark .comp-thumb{background:rgba(255,255,255,.18)}
+.comp-b{position:relative;z-index:2;border:none;background:transparent;cursor:pointer;padding:8px 20px;font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;color:var(--ink-soft);transition:color .3s}
+.comp-b.active{color:var(--ink)}
+.comp-barrow{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:18px;margin-bottom:16px}
+.comp-blabel{text-align:right}
+.comp-bname{font-family:"Montserrat",sans-serif;font-weight:800;font-size:19px;color:var(--ink);letter-spacing:-.01em}
+.comp-btag{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
+.comp-bar{display:flex;height:54px;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,30,54,.08);background:var(--surface-muted)}
+.comp-seg{height:100%;width:0;display:flex;align-items:center;justify-content:center;transition:width .8s var(--spring),opacity .25s,filter .25s;cursor:pointer;position:relative;min-width:0}
+.comp-seg .comp-sv{font-family:"Montserrat",sans-serif;font-weight:800;font-size:15px;letter-spacing:-.01em;white-space:nowrap;opacity:0;transition:opacity .4s}
+.comp-seg.show .comp-sv{opacity:1}
+.comp-m{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}.comp-m .comp-sv{color:var(--au-navy)}
+.comp-o{background:var(--au-green-deep)}.comp-o .comp-sv{color:#fff}
+.comp-w{background:var(--au-navy)}.comp-w .comp-sv{color:#fff}
+body.dark .comp-w{background:var(--au-navy-soft)}
+.comp-chart.dim .comp-seg:not(.hot){opacity:.32;filter:saturate(.6)}
+.comp-seg.hot{filter:brightness(1.04)}
+.comp-readout{margin-top:4px;min-height:28px;display:flex;align-items:center;gap:10px;font-size:15px;color:var(--ink-mid)}
+.comp-readout .rdot{width:11px;height:11px;border-radius:3px;border:1px solid var(--line)}
+.comp-readout b{font-family:"Montserrat",sans-serif;color:var(--ink);font-weight:700}
+.comp-readout .rhint{color:var(--ink-soft);font-style:italic;font-size:13.5px}
+
+.hero-title{font-family:"Montserrat",sans-serif;font-size:clamp(34px,4.6vw,56px);font-weight:700;color:var(--ink);line-height:1.0;letter-spacing:-.03em;margin-bottom:12px}
+.hero-title em{font-family:"Source Sans 3",sans-serif;font-style:italic;font-weight:300;color:var(--au-navy-mid)}
+.hero-sub{font-size:clamp(15px,1.65vw,18px);color:var(--ink-mid);line-height:1.5;max-width:620px;margin:0 auto 15px;font-weight:400}
+.hero-sub strong{color:var(--ink);font-weight:700}
+.ax-card{width:100%;max-width:810px;margin:0 auto;background:rgba(255,255,255,.66);backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%);border:1px solid rgba(255,255,255,.75);border-radius:28px;box-shadow:0 24px 70px rgba(0,30,54,.14),inset 0 1px 0 rgba(255,255,255,.7);padding:15px 22px}
+body.dark .ax-card{background:rgba(0,45,72,.5);border-color:rgba(255,255,255,.09);box-shadow:0 24px 70px rgba(0,0,0,.42)}
+/* Centered lecture-intro kicker (from the slide-2 refresh) */
+.slide-kicker{font-family:"Montserrat",sans-serif;font-size:11px;letter-spacing:.22em;color:var(--au-green-deep);font-weight:700;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px}
+.slide-kicker::before,.slide-kicker::after{content:"";width:30px;height:2px;background:var(--au-green)}
+.slide-kicker .k-topic{color:var(--ink-soft)}
+body.dark .slide-kicker{color:var(--au-green)}
+/* Quiz password: trigger button (title slide) + modal */
+.qpw{margin-top:34px;display:flex;align-items:center;min-height:52px}
+.qpw-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat",sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--au-navy);background:transparent;border:1.5px solid var(--au-gray-pale);border-radius:100px;padding:11px 20px;cursor:pointer;transition:border-color .2s,color .2s,box-shadow .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+.qpw-btn:hover{border-color:var(--au-green);color:var(--au-green-deep);box-shadow:0 6px 18px rgba(0,30,54,.08)}
+.qpw-btn:active{transform:scale(.98)}
+body.dark .qpw-btn{color:#fff;border-color:rgba(255,255,255,.2)}
+body.dark .qpw-btn:hover{border-color:var(--au-green);color:var(--au-green)}
+.qpw-ic{display:inline-flex}
+.qpw-ic svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.qpw-modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.qpw-modal.open{opacity:1;pointer-events:auto}
+.qpw-modal-backdrop{position:absolute;inset:0;background:rgba(0,30,54,.55);backdrop-filter:blur(10px) saturate(120%);-webkit-backdrop-filter:blur(10px) saturate(120%);cursor:pointer}
+.qpw-modal-card{position:relative;z-index:1;width:min(430px,92vw);background:var(--surface-card);border:1px solid rgba(0,30,54,.05);border-radius:28px;overflow:hidden;box-shadow:0 34px 90px rgba(0,30,54,.3),0 8px 22px rgba(0,30,54,.12);transform:scale(.94) translateY(12px);transition:transform .4s var(--spring)}
+.qpw-modal.open .qpw-modal-card{transform:scale(1) translateY(0)}
+body.dark .qpw-modal-card{border-color:rgba(255,255,255,.08)}
+.qpw-chrome{height:6px;background:var(--au-green)}
+.qpw-body{padding:30px 46px 40px;text-align:center}
+.qpw-ribbon{font-family:"Montserrat",sans-serif;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;margin-bottom:28px}
+.qpw-dot{display:inline-block;width:5px;height:5px;background:var(--au-green);border-radius:50%;margin:0 10px}
+.qpw-kicker{font-family:"Montserrat",sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--au-green-deep);display:flex;align-items:center;justify-content:center;gap:12px}
+.qpw-kicker::before,.qpw-kicker::after{content:"";width:26px;height:2px;background:var(--au-green)}
+body.dark .qpw-kicker{color:var(--au-green)}
+.qpw-gate-input{margin-top:22px;width:100%;text-align:center;font-family:"Montserrat",sans-serif;font-size:24px;font-weight:500;letter-spacing:.3em;color:var(--ink);background:var(--surface-muted);border:1.5px solid transparent;border-radius:14px;padding:14px 16px;outline:none;transition:border-color .2s,background .2s;-webkit-tap-highlight-color:transparent}
+.qpw-gate-input::placeholder{font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft)}
+.qpw-gate-input:focus{border-color:var(--au-green);background:var(--paper)}
+body.dark .qpw-gate-input:focus{background:rgba(255,255,255,.04)}
+.qpw-gate-input.shake{animation:shake .4s ease}
+.qpw-gate-msg{min-height:15px;margin-top:12px;font-size:12.5px;letter-spacing:.01em;color:var(--ink-soft)}
+.qpw-gate-btn{margin-top:18px;font-family:"Montserrat",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--au-navy);border:none;border-radius:100px;padding:12px 36px;cursor:pointer;transition:background .2s,box-shadow .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+.qpw-gate-btn:hover{background:var(--au-navy-mid);box-shadow:0 8px 20px rgba(0,30,54,.2)}
+.qpw-gate-btn:active{transform:scale(.97)}
+body.dark .qpw-gate-btn{background:var(--au-green);color:var(--au-navy-deep)}
+body.dark .qpw-gate-btn:hover{background:var(--au-green-deep)}
+.qpw-reveal-state{display:none}
+.qpw-modal-card.unlocked .qpw-gate{display:none}
+.qpw-modal-card.unlocked .qpw-reveal-state{display:block;animation:qpwFade .4s ease}
+@keyframes qpwFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.qpw-modal-code{margin-top:20px;font-family:"Montserrat",sans-serif;font-size:clamp(52px,9vw,78px);font-weight:500;letter-spacing:.08em;color:var(--ink);line-height:1}
+.qpw-modal-hide{margin-top:28px;font-family:"Montserrat",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--au-navy);background:transparent;border:1.5px solid var(--au-gray-pale);border-radius:100px;padding:11px 30px;cursor:pointer;transition:border-color .2s,color .2s,box-shadow .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+.qpw-modal-hide:hover{border-color:var(--au-green);color:var(--au-green-deep);box-shadow:0 6px 18px rgba(0,30,54,.1)}
+.qpw-modal-hide:active{transform:scale(.97)}
+body.dark .qpw-modal-hide{color:#fff;border-color:rgba(255,255,255,.2)}
+body.dark .qpw-modal-hide:hover{border-color:var(--au-green);color:var(--au-green)}
+.seg{position:relative;display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface-muted);border-radius:13px;padding:4px;margin-bottom:11px}
+.seg-thumb{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px)/4);background:var(--surface-card);border-radius:10px;box-shadow:0 3px 8px rgba(0,30,54,.15);transition:transform .45s var(--spring)}
+body.dark .seg-thumb{background:rgba(255,255,255,.18)}
+.seg-btn{position:relative;z-index:2;border:none;background:transparent;cursor:pointer;padding:9px 4px;font-family:"Montserrat",sans-serif;font-size:clamp(11.5px,1.35vw,14px);font-weight:600;color:var(--ink-soft);transition:color .3s;-webkit-tap-highlight-color:transparent}
+.seg-btn.active{color:var(--ink)}
+.ax-kind{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;transition:opacity .18s}
+.ax-ratio{display:inline-block;font-family:"Montserrat",sans-serif;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--au-green-deep);background:var(--au-green-pale);padding:6px 15px;border-radius:100px;margin-bottom:10px;transition:opacity .18s}
+body.dark .ax-ratio{background:rgba(68,214,44,.14);color:var(--au-green)}
+.ax-tiles{display:grid;grid-template-columns:1fr 40px 1fr;align-items:stretch;gap:12px;margin-bottom:10px}
+.ax-tile{background:rgba(0,51,89,.04);border:1.5px solid rgba(0,51,89,.06);border-radius:20px;padding:16px 14px 12px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .35s var(--spring),box-shadow .35s,border-color .35s}
+body.dark .ax-tile{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08)}
+.ax-tile:hover{transform:translateY(-3px)}
+.ax-tile.win{border-color:rgba(68,214,44,.6);box-shadow:0 0 0 1px rgba(68,214,44,.4),0 12px 30px rgba(0,30,54,.08)}
+.ax-tile-label{font-family:"Montserrat",sans-serif;font-size:clamp(14px,1.55vw,17px);font-weight:700;color:var(--ink);line-height:1.1}
+.ax-tile-label i{display:block;font-style:normal;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+.ax-num{font-family:"Montserrat",sans-serif;font-size:clamp(30px,4.4vw,50px);font-weight:800;color:var(--ink);line-height:.92;letter-spacing:-.03em;margin:11px 0 2px;display:flex;align-items:baseline;justify-content:center;gap:5px}
+.ax-num em{font-family:"Montserrat",sans-serif;font-style:normal;font-size:clamp(10px,1.1vw,13px);font-weight:600;color:var(--ink-soft)}
+.ax-meter{width:100%;height:6px;border-radius:100px;background:var(--surface-muted);margin-top:11px;overflow:hidden}
+.ax-meter-fill{height:100%;width:0;border-radius:100px;transition:width .65s var(--spring),background .3s}
+.ax-pill-row{min-height:22px;display:flex;align-items:center;justify-content:center;margin-top:9px}
+.ax-winpill{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--au-green-deep);background:var(--au-green-pale);padding:4px 12px;border-radius:100px;opacity:0;transform:scale(.85);transition:opacity .35s,transform .35s var(--spring)}
+body.dark .ax-winpill{background:rgba(68,214,44,.16);color:var(--au-green)}
+.ax-tile.win .ax-winpill{opacity:1;transform:scale(1)}
+.ax-vs{align-self:center;font-family:"Montserrat",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.ax-feel{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:9px;transition:opacity .18s}
+.ax-feel-h{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.ax-chip{display:inline-flex;align-items:baseline;gap:7px;background:var(--surface-muted);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)}
+.ax-chip b{font-family:"Montserrat",sans-serif;font-weight:600;font-size:13px;color:var(--ink)}
+.ax-clin{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--surface-muted);border:1px solid var(--line);border-radius:16px;padding:14px 18px;transition:opacity .18s}
+body.dark .ax-clin{border-color:rgba(165,172,175,.14)}
+.ax-clin-ic{width:26px;height:26px;border-radius:50%;background:var(--au-green-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ax-clin-ic svg{width:14px;height:14px;stroke:var(--au-green-deep);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+body.dark .ax-clin-ic{background:rgba(68,214,44,.14)}body.dark .ax-clin-ic svg{stroke:var(--au-green)}
+.ax-clin-label{font-family:"Montserrat",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--au-green-deep);margin-bottom:4px}
+body.dark .ax-clin-label{color:var(--au-green)}
+.ax-clin-text{font-size:clamp(13.5px,1.45vw,15.5px);color:var(--ink-mid);line-height:1.5}
+.ax-clin-text b{color:var(--ink);font-weight:600}
+.ax-quiz{margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.qz-q{font-size:clamp(14px,1.5vw,16px);color:var(--ink-mid);line-height:1.4;margin-bottom:11px;display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
+.qz-q b{color:var(--ink);font-weight:700}
+.qz-tag{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--au-green-deep);background:var(--au-green-pale);padding:4px 10px;border-radius:100px}
+body.dark .qz-tag{background:rgba(68,214,44,.16);color:var(--au-green)}
+.qz-opts{display:flex;gap:9px;flex-wrap:wrap;justify-content:center}
+.qz-opt{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:600;color:var(--ink);background:var(--surface-muted);border:1.5px solid transparent;border-radius:100px;padding:9px 20px;cursor:pointer;transition:background .2s,border-color .25s,color .25s,transform .15s;-webkit-tap-highlight-color:transparent}
+.qz-opt:hover{background:var(--au-gray-pale)}
+body.dark .qz-opt:hover{background:rgba(165,172,175,.2)}
+.qz-opt:active{transform:scale(.96)}
+.qz-opt.correct{background:var(--au-green-pale);border-color:rgba(68,214,44,.6);color:var(--au-green-deep)}
+body.dark .qz-opt.correct{background:rgba(68,214,44,.16);color:var(--au-green)}
+.qz-opt.correct::before{content:"\2713";font-weight:800;margin-right:6px}
+.qz-opt.wrong{opacity:.45;animation:shake .4s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+.qz-fb{min-height:20px;margin-top:11px;font-size:13.5px;color:var(--ink-mid);line-height:1.45;opacity:0;transition:opacity .3s}
+.qz-fb.show{opacity:1}.qz-fb b{color:var(--ink);font-weight:700}
+
+.reveal{opacity:0;transform:translateY(18px)}
+.slide.active .reveal{animation:revealUp .8s var(--spring) forwards}
+.slide.active .reveal.d1{animation-delay:.06s}.slide.active .reveal.d2{animation-delay:.16s}.slide.active .reveal.d3{animation-delay:.3s}.slide.active .reveal.d4{animation-delay:.44s}
+@keyframes revealUp{to{opacity:1;transform:translateY(0)}}
+
+.nav-controls{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;background:rgba(0,30,54,.92);border:1px solid rgba(68,214,44,.3);border-radius:100px;padding:8px 12px;z-index:100;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,30,54,.25)}
+.nav-btn{width:34px;height:34px;border-radius:50%;border:none;background:transparent;color:#f2f4f5;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:"Montserrat",sans-serif;font-weight:700;font-size:16px;transition:background .2s,transform .2s}
+.nav-btn:hover{background:rgba(68,214,44,.2)}.nav-btn:active{transform:scale(.94)}
+.nav-dots{display:flex;gap:5px;padding:0 6px;max-width:360px;flex-wrap:wrap;justify-content:center}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:rgba(165,172,175,.4);cursor:pointer;transition:background .25s,transform .25s;border:none;padding:0}
+.nav-dot.active{background:var(--au-green);transform:scale(1.4)}
+.nav-counter{font-family:"Montserrat",sans-serif;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.7);font-weight:600;padding:0 6px;min-width:54px;text-align:center}.nav-counter .current{color:var(--au-green);font-weight:700}
+.fs-btn,.theme-btn{position:fixed;bottom:28px;width:32px;height:32px;border:none;border-radius:50%;background:rgba(0,30,54,.35);color:rgba(255,255,255,.55);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;z-index:99;transition:background .25s,color .25s,opacity .25s;opacity:.5;backdrop-filter:blur(6px)}
+.fs-btn{right:28px}.theme-btn{right:68px}
+.fs-btn:hover,.theme-btn:hover{background:rgba(0,30,54,.85);color:var(--au-green);opacity:1}
+body.dark .fs-btn,body.dark .theme-btn{background:rgba(255,255,255,.08);color:rgba(255,255,255,.65)}
+.theme-btn .sun{display:none}body.dark .theme-btn .sun{display:block}body.dark .theme-btn .moon{display:none}
+.au-shield{position:fixed;top:16px;right:20px;z-index:50;width:clamp(34px,4vw,48px);height:auto;pointer-events:none}
+@media(max-width:1000px){.slide-inner{padding:44px 22px 80px}.title-slide .slide-inner{padding:52px 30px}.grid2{grid-template-columns:1fr}.ax-tiles{grid-template-columns:1fr}.ax-vs{display:none}.road .rd{display:none}.title-credentials{gap:28px}.comp-barrow{grid-template-columns:1fr;gap:8px}.comp-blabel{text-align:left}}
+.spine3{display:flex;align-items:stretch;gap:10px;margin-top:16px}
+.spine3-card{flex:1;background:var(--surface-card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.spine3-card .s3-k{font-family:"Montserrat",sans-serif;font-weight:800;font-size:14px;color:var(--au-navy);letter-spacing:-.01em}
+.spine3-card .s3-d{font-size:12.5px;color:var(--ink-mid);margin-top:6px;line-height:1.4}
+.spine3-card .s3-d em{color:var(--au-green-deep);font-style:normal;font-weight:600}
+body.dark .spine3-card .s3-k{color:#fff}
+.spine3-arw{display:flex;align-items:center;color:var(--au-green);font-weight:800;font-size:16px;flex:0 0 auto}
+.s3-cap{margin-top:12px;font-size:13px;color:var(--ink-soft);line-height:1.4}
+.s3-cap b{font-family:"Montserrat",sans-serif;color:var(--au-navy);font-weight:700}
+body.dark .s3-cap b{color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.pcard{background:var(--surface-card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,30,54,.06)}
+.pcard .pk{font-family:"Montserrat",sans-serif;font-weight:800;font-size:16px;color:var(--au-navy);letter-spacing:-.01em;margin-bottom:9px}
+.pcard .pd{font-size:13.5px;color:var(--ink-mid);line-height:1.5}
+.pcard .pd b{color:var(--au-navy);font-family:"Montserrat",sans-serif;font-weight:700}
+.pcard .pd em{color:var(--au-green-deep);font-style:normal;font-weight:600}
+body.dark .pcard .pk{color:#fff}
+.src-tag{color:var(--ink-soft);font-size:11px;font-style:italic}
+.dsheet.posts td:first-child{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--au-navy)}
+.dsheet.posts .row-pick td{background:var(--au-green-pale);border-top:1px solid var(--au-green);border-bottom:1px solid var(--au-green)}
+body.dark .dsheet.posts .row-pick td{background:rgba(68,214,44,.14)}
+.gpa{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--au-navy);white-space:nowrap}
+.fp{display:grid;grid-template-columns:1fr 1.7fr;gap:18px;margin-top:24px;align-items:stretch}
+.fp-card{background:var(--surface-card);border:1px solid var(--line);border-radius:18px;padding:24px 26px 26px;box-shadow:0 12px 34px rgba(0,30,54,.08)}
+.fp-u{font-family:"Montserrat",sans-serif;font-weight:800;font-size:40px;color:var(--au-green-deep);letter-spacing:-.03em;line-height:1}
+.fp-lab{font-family:"Montserrat",sans-serif;font-weight:700;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--au-navy);margin:12px 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.fp-line{font-size:15px;color:var(--ink-mid);line-height:1.5;margin-bottom:10px}
+.fp-line b{color:var(--au-navy);font-family:"Montserrat",sans-serif;font-weight:700}
+.fp-tooth{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.fp-tooth .tt-h{font-size:14.5px;color:var(--ink);font-weight:600;margin-bottom:9px}
+.fp-tooth .tt-h b{color:var(--au-navy);font-family:"Montserrat",sans-serif;font-weight:800}
+.fp-eg{display:flex;align-items:baseline;gap:10px;font-size:14px;color:var(--ink-mid);line-height:1.4;margin-bottom:6px}
+.fp-eg::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--au-green);flex:0 0 auto;transform:translateY(-1px)}
+body.dark .fp-lab,body.dark .fp-line b,body.dark .fp-tooth .tt-h b{color:#fff}
+/* ---- reading room ---- */
+.slide-inner--rr{justify-content:flex-start;padding:44px 64px 40px}
+.rr{flex:1;display:flex;flex-direction:column;min-height:0;margin-top:14px}
+.rr-chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.rr-chip{font-family:"Montserrat",sans-serif;font-weight:600;font-size:12px;padding:7px 15px;border-radius:100px;border:1px solid var(--line);background:var(--surface-card);color:var(--ink-mid);cursor:pointer;transition:.16s;white-space:nowrap}
+.rr-chip:hover{border-color:var(--au-green);color:var(--au-navy)}
+.rr-chip.on{background:var(--au-navy);border-color:var(--au-navy);color:#fff}
+.rr-search{margin-left:auto;position:relative}
+.rr-search input{width:230px;border:1px solid var(--line);background:var(--surface-card);color:var(--ink);border-radius:100px;padding:8px 14px 8px 34px;font-family:inherit;font-size:13.5px;outline:none;transition:.16s}
+.rr-search input:focus{border-color:var(--au-green)}
+.rr-search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--ink-soft);fill:none;stroke-width:2}
+.rr-body{flex:1;display:grid;grid-template-columns:360px 1fr;gap:18px;min-height:0}
+.rr-list{overflow-y:auto;padding-right:5px;display:flex;flex-direction:column;gap:9px}
+.rr-grp{font-family:"Montserrat",sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--au-green-deep);margin:8px 4px 2px}
+.rr-grp:first-child{margin-top:0}
+.rr-ref{background:var(--surface-card);border:1px solid var(--line);border-left:3px solid transparent;border-radius:13px;padding:13px 15px;cursor:pointer;transition:.16s;box-shadow:0 6px 18px rgba(0,30,54,.05)}
+.rr-ref:hover{border-color:var(--au-green);border-left-color:var(--au-green);transform:translateX(2px)}
+.rr-ref.on{border-color:var(--au-green);border-left-color:var(--au-green);background:var(--au-green-pale)}
+.rr-ref .t{font-family:"Montserrat",sans-serif;font-weight:700;font-size:13.5px;color:var(--au-navy);line-height:1.32}
+.rr-ref .a{font-size:12px;color:var(--ink-mid);margin-top:4px;line-height:1.35;font-style:italic}
+.rr-ref .tag{display:inline-block;font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--au-navy-soft);margin-top:8px}
+.rr-view{border:1px solid var(--line);border-radius:16px;overflow:hidden;position:relative;background:#525659;box-shadow:0 14px 40px rgba(0,30,54,.10)}
+.rr-view iframe{width:100%;height:100%;border:0;display:none}
+.rr-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:28px;background:var(--surface-muted)}
+.rr-empty svg{width:46px;height:46px;stroke:var(--au-gray);stroke-width:1.4;fill:none}
+.rr-empty .e1{font-family:"Montserrat",sans-serif;font-weight:700;font-size:16px;color:var(--au-navy)}
+.rr-empty .e2{font-size:13.5px;color:var(--ink-soft);max-width:320px;line-height:1.5}
+.rr-open{position:absolute;top:12px;right:12px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:11px;color:var(--au-navy);background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:100px;padding:6px 12px;text-decoration:none;display:none;z-index:3}
+.rr-open:hover{border-color:var(--au-green);color:var(--au-green-deep)}
+</style>
+</head>
+<body>
+<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA4MS4zIDg1LjEiPgo8ZGVmcz48c3R5bGU+LnN0MHtmaWxsOm5vbmV9LnN0MXtmaWxsOiNmZmZ9LnN0MntmaWxsOiMwMDMwNTV9PC9zdHlsZT48L2RlZnM+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik03OS4wMiwyLjM3SDIuNzR2NTQuMjNoMS4xYy45NiwxNC4zNSwxNy4wOSwyNS43NywzNi44NSwyNS43N3MzNS44OS0xMS40MiwzNi44NS0yNS43N2gxLjQ3VjIuMzdaIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0wLDQ0LjVjMCwyMi41LDE4LjIsNDAuNyw0MC43LDQwLjdoMGMyMi41LDAsNDAuNy0xOC4yLDQwLjctNDAuN1YwSDB2NDQuNVpNMy44LDMuOGg3My44djQwLjdjMCwxMy45LTcuNywyNi0xOSwzMi4zbC0uNy40Yy01LjEsMi43LTExLDQuMi0xNy4yLDQuMnMtMTItMS41LTE3LjItNC4ybC0uNy0uNEMxMS41LDcwLjUsMy44LDU4LjQsMy44LDQ0LjVjMCwwLDAtNDAuNywwLTQwLjdaIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yNC4zLDI2LjNsLTIuNC0zLjF2LTEuM2gzNy41djEuM2wtMi40LDMuMSw4LjMsNDAuMWM1LjItNS44LDguNC0xMy41LDguNC0yMlY3LjZINy42djM2LjljMCw4LjUsMy4yLDE2LjIsOC40LDIybDguMy00MC4yaDBaTTE3LjksMTUuMmg0NS42bC44LDMuOUgxNy4xYzAtLjEuOC0zLjkuOC0zLjlaIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik01Ni45LDU2LjZIMjQuNWwxLjksMi42LTIuOCwxMy43Yy45LjUsMS44LDEsMi43LDEuNWwzLjgtMTEuNGgyMS4xbDMuOCwxMS4zYy45LS40LDEuOC0uOSwyLjctMS41bC0yLjctMTMuNywxLjktMi41aDBaIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yNC44LDQ4LjNsLS41LDIuNmgzMi43bC0uNS0yLjZoLTMuOGwtMy43LTE4LjEsMi0yLjZoLTIwLjZsMiwyLjYtMy43LDE4LjFoLTMuOVpNMzQuMiwzNC4xaDIuNmMuMSwwLC4yLjEuMS4yLS4xLjMtLjIuNi0uMy45LDAsLjItLjEuNS0uMS44aDBjMCwyLjYsMi4yLDMuNCwzLjEsMy42LDIuOS42LDMuMiwxLjMsMy4yLDEuMy01LjgtLjQtOC4yLjQtOC44LDEuMSwwLC4xLS4xLjItLjEuM3YxLjljMCwxLDMsMS44LDYuNiwxLjhzNi42LS44LDYuNi0xLjh2LTEuOWMwLS4yLS4xLS40LS4yLS42LS42LS42LTIuMy0yLjQtMi4zLTUuNCwwLS4xLDAtLjktLjEtMS4ycy0uMi0uNi0uMy0uOWMwLS4xLDAtLjIuMS0uMmgyLjZsMi45LDE0LjJoLTE4LjVsMi45LTE0LjFoMFpNNDUuMiw0My44YzAsLjQtMiwuOC00LjUuOHMtNC41LS4zLTQuNS0uOGMwLS4zLDEuNC0uNywzLjItLjcuMi41LjcuOCwxLjMuOHMxLjEtLjMsMS4zLS44YzEuOSwwLDMuMi4zLDMuMi43WiIvPgo8L3N2Zz4=" alt="" class="au-shield">
+<div class="deck" id="deck">
+<section class="slide title-slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="title-kicker reveal d1">Material Properties of the Tooth</div>
+<h1 class="reveal d2">Properties of<br>Dental Hard Tissues<span class="sub">RSDM 5511 &middot; The Mechanical and Physical Properties of Enamel and Dentin</span></h1>
+<div class="title-credentials reveal d3">
+<div class="tc-block"><span class="tc-label">Course Director</span><span class="tc-value bold">Rafael Rocha Pacheco, DDS, MSc, PhD</span></div>
+<div class="tc-block"><span class="tc-label">Position</span><span class="tc-value">Associate Dean for Digital Technologies<br>Associate Professor</span></div>
+<div class="tc-block"><span class="tc-label">Department</span><span class="tc-value">Restorative Sciences<br>Section of Dental Materials</span></div>
+<div class="tc-block"><span class="tc-label">Contact</span><span class="tc-value">RAPACHECO@augusta.edu</span></div>
+</div>
+<div class="qpw reveal d3">
+<button class="qpw-btn" id="qpwBtn" type="button" aria-haspopup="dialog" aria-expanded="false"><span class="qpw-ic"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></span>Reveal quiz password</button>
+</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner ctr">
+<div class="slide-kicker reveal d1">Lecture Introduction <span class="k-topic">Dental Hard Tissues</span></div>
+<div class="hero-title reveal d2">Know the Tooth <em>to</em> Restore It</div>
+<div class="hero-sub reveal d2">A tooth carries bite loads that can top <strong>800 N</strong>, roughly a thousand chewing cycles a day for decades. Before any material replaces part of it, you have to know how enamel and dentin behave. Tap each property, then try the quick check.</div>
+<div class="ax-card reveal d3">
+<div class="seg" id="seg"><span class="seg-thumb" id="segThumb"></span><button class="seg-btn active" data-i="0">Stiffness</button><button class="seg-btn" data-i="1">Hardness</button><button class="seg-btn" data-i="2">Toughness</button><button class="seg-btn" data-i="3">Thermal</button></div>
+<div class="ax-kind" id="axKind">Mechanical property</div>
+<div class="ax-ratio" id="axRatio">Enamel &asymp; 4&times; stiffer</div>
+<div class="ax-tiles">
+<div class="ax-tile win" id="tileE"><span class="ax-tile-label">Enamel<i>The Armor</i></span><span class="ax-num"><span id="eNum">80</span><em id="eUnit">GPa</em></span><div class="ax-meter"><div class="ax-meter-fill" id="fillE"></div></div><div class="ax-pill-row"><span class="ax-winpill" id="pillE">Stiffer</span></div></div>
+<div class="ax-vs">vs</div>
+<div class="ax-tile" id="tileD"><span class="ax-tile-label">Dentin<i>The Foundation</i></span><span class="ax-num"><span id="dNum">20</span><em id="dUnit">GPa</em></span><div class="ax-meter"><div class="ax-meter-fill" id="fillD"></div></div><div class="ax-pill-row"><span class="ax-winpill" id="pillD">Stiffer</span></div></div>
+</div>
+<div class="ax-feel" id="axFeel"><span class="ax-feel-h" id="feelH">Feels like</span><span class="ax-chip"><b id="feelE">Aluminium</b><span id="feelEsub">~70 GPa</span></span><span class="ax-chip"><b id="feelD">Bone</b><span id="feelDsub">~18 GPa</span></span></div>
+<div class="ax-clin" id="axClin"><span class="ax-clin-ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg></span><div><div class="ax-clin-label" id="cLabel">Clinical relevance</div><div class="ax-clin-text" id="cText">Stiff enamel rides on the more flexible dentin beneath it. Remove that support and enamel flexes past its limit and chips, which is why a preparation keeps a sound <b>dentin floor</b> and undermined cusps get covered.</div></div></div>
+<div class="ax-quiz"><div class="qz-q"><span class="qz-tag">Quick check</span> Which property is greater in <b>dentin</b> than in <b>enamel</b>?</div><div class="qz-opts" id="qzOpts"><button class="qz-opt" data-c="0">Stiffness</button><button class="qz-opt" data-c="0">Hardness</button><button class="qz-opt" data-c="1">Toughness</button><button class="qz-opt" data-c="0">Thermal expansion</button></div><div class="qz-fb" id="qzFb"></div></div>
+</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Behavioral Objectives <span class="kt">Part 1 of 2</span></div>
+<div class="c-title reveal d2" style="margin-bottom:8px">Upon completion, you will be able to&hellip;</div>
+<div class="obj-legend reveal d2"><span class="li"><span class="ld ld-must"></span>Must know &middot; 10</span><span class="li"><span class="ld ld-good"></span>Good to know &middot; 5</span><span class="li"><span class="ld ld-nice"></span>Nice to know &middot; 3</span><span class="li" style="font-style:italic">Tap to jump</span></div>
+<div class="grid2 reveal d3" style="gap:0 46px;margin-top:14px">
+<div>
+<div class="obj-sec">Framing</div>
+<div class="obj must" data-goto="6"><span class="obj-badge"><span class="obj-num">1</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Explain</span> why a tooth is a graded composite, not a uniform block: a hard enamel shell over a tough dentin core, joined by the DEJ, resisting wear and fracture at once.</span></div>
+<div class="obj must" data-goto="8"><span class="obj-badge"><span class="obj-num">2</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Describe</span> what a tooth withstands, from light chewing to hard bites near 800 N, the hundreds of MPa that concentrate at a functional cusp, and why fatigue, not one overload, drives most failures.</span></div>
+<div class="obj-sec">The two tissues</div>
+<div class="obj must" data-goto="11"><span class="obj-badge"><span class="obj-num">3</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Distinguish</span> enamel and dentin as two apatite biocomposites built from the same mineral for opposite jobs, and predict their behavior from mineral volume fraction.</span></div>
+<div class="obj must" data-goto="14"><span class="obj-badge"><span class="obj-num">4</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Identify</span> the microstructure of enamel (rods) and dentin (tubules, peritubular and intertubular dentin, and collagen).</span></div>
+<div class="obj must" data-goto="16"><span class="obj-badge"><span class="obj-num">5</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Describe</span> the dentin-enamel junction as a graded interface that transfers load and arrests cracks.</span></div>
+</div>
+<div>
+<div class="obj-sec">The living tooth</div>
+<div class="obj nice" data-goto="17"><span class="obj-badge"><span class="obj-num">6</span><span class="obj-tier">Nice</span></span><span class="obj-text"><span class="ov">Explain</span> how a vital pulp keeps dentin a living tissue through ongoing formation, hydration, and sensation.</span></div>
+<div class="obj-sec">Measuring</div>
+<div class="obj good" data-goto="19"><span class="obj-badge"><span class="obj-num">7</span><span class="obj-tier">Good</span></span><span class="obj-text"><span class="ov">Match</span> each property, modulus, hardness, fracture toughness, and thermal expansion, to the correct test, and explain why a value shifts with method, direction, hydration, and rate.</span></div>
+<div class="obj-sec">Mechanical behavior</div>
+<div class="obj good" data-goto="24"><span class="obj-badge"><span class="obj-num">8</span><span class="obj-tier">Good</span></span><span class="obj-text"><span class="ov">Explain</span> the modulus mismatch of rigid enamel on compliant dentin, and what that gradient does under load.</span></div>
+<div class="obj nice" data-goto="25"><span class="obj-badge"><span class="obj-num">9</span><span class="obj-tier">Nice</span></span><span class="obj-text"><span class="ov">Describe</span> why enamel is the hardest tissue in the body, and how hardness governs wear of the tooth and its opponent.</span></div>
+</div>
+</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Behavioral Objectives <span class="kt">Part 2 of 2</span></div>
+<div class="c-title reveal d2" style="margin-bottom:8px">Upon completion, you will be able to&hellip;</div>
+<div class="obj-legend reveal d2"><span class="li"><span class="ld ld-must"></span>Must know &middot; 10</span><span class="li"><span class="ld ld-good"></span>Good to know &middot; 5</span><span class="li"><span class="ld ld-nice"></span>Nice to know &middot; 3</span><span class="li" style="font-style:italic">Tap to jump</span></div>
+<div class="grid2 reveal d3" style="gap:0 46px;margin-top:14px">
+<div>
+<div class="obj-sec">Mechanical behavior</div>
+<div class="obj must" data-goto="26"><span class="obj-badge"><span class="obj-num">10</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Explain</span> why enamel is strong in compression but weak in tension, and where that makes it crack.</span></div>
+<div class="obj must" data-goto="27"><span class="obj-badge"><span class="obj-num">11</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Differentiate</span> hardness from fracture toughness, since harder is not tougher, and identify the toughening mechanisms, crack deflection and bridging, that keep the tooth from shattering.</span></div>
+<div class="obj-sec">Physical properties</div>
+<div class="obj good" data-goto="30"><span class="obj-badge"><span class="obj-num">12</span><span class="obj-tier">Good</span></span><span class="obj-text"><span class="ov">Relate</span> low thermal expansion, translucency, opalescence and fluorescence, and radiodensity to margin sealing, shade matching, and radiographic reading.</span></div>
+<div class="obj-sec">Benchmarking</div>
+<div class="obj good" data-goto="34"><span class="obj-badge"><span class="obj-num">13</span><span class="obj-tier">Good</span></span><span class="obj-text"><span class="ov">Read</span> a benchmark datasheet that specs enamel and dentin against amalgam, composite, glass ionomer, ceramics, zirconia, and titanium.</span></div>
+<div class="obj good" data-goto="36"><span class="obj-badge"><span class="obj-num">14</span><span class="obj-tier">Good</span></span><span class="obj-text"><span class="ov">Interpret</span> the modulus, thermal expansion, and wear spectra of restoratives, and recognize that no single material matches the tooth on every property.</span></div>
+</div>
+<div>
+<div class="obj-sec">How they fail</div>
+<div class="obj must" data-goto="41"><span class="obj-badge"><span class="obj-num">15</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Categorize</span> the four failure routes, fracture, fatigue, wear, and chemical demineralization, and explain how fluoride drives remineralization toward a less soluble, fluoride-substituted apatite.</span></div>
+<div class="obj nice" data-goto="45"><span class="obj-badge"><span class="obj-num">16</span><span class="obj-tier">Nice</span></span><span class="obj-text"><span class="ov">Explain</span> what does and does not change in an endodontically treated tooth, and why lost structure, not dried dentin, drives fracture risk.</span></div>
+<div class="obj-sec">Selecting and designing</div>
+<div class="obj must" data-goto="47"><span class="obj-badge"><span class="obj-num">17</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Select</span> a restorative material for a given site and justify it by matching demands to properties.</span></div>
+<div class="obj must" data-goto="49"><span class="obj-badge"><span class="obj-num">18</span><span class="obj-tier">Must</span></span><span class="obj-text"><span class="ov">Justify</span> why a post retains a core but does not reinforce a root, and why material alone is not enough, since structure, ferrule, and occlusion decide survival.</span></div>
+</div>
+</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Roadmap</div>
+<div class="c-title reveal d2">How the Session <em>Flows</em></div>
+<div class="c-lead reveal d2" style="margin-bottom:18px">Seven movements, running from what the tissues are made of to how you choose a material that matches them.</div>
+<div class="reveal d3" style="width:100%;max-width:860px">
+<div class="road"><span class="rn">One</span><span class="rt">The tissues as biomaterials</span><span class="rd">structure and phases</span></div>
+<div class="road"><span class="rn">Two</span><span class="rt">Characterization</span><span class="rd">how properties are measured</span></div>
+<div class="road"><span class="rn">Three</span><span class="rt">Mechanical properties</span><span class="rd">stiffness, hardness, toughness, fatigue</span></div>
+<div class="road"><span class="rn">Four</span><span class="rt">Physical properties</span><span class="rd">thermal, optical, radiographic</span></div>
+<div class="road"><span class="rn">Five</span><span class="rt">Property maps and benchmarking</span><span class="rd">the tooth vs the materials</span></div>
+<div class="road"><span class="rn">Six</span><span class="rt">Failure modes</span><span class="rd">fracture, fatigue, wear, degradation</span></div>
+<div class="road"><span class="rn">Seven</span><span class="rt">Materials selection and design</span><span class="rd">matching the benchmark</span></div>
+</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">The Mental Model</div>
+<div class="c-title reveal d2">Not a Block. A Graded <em>Composite.</em></div>
+<div class="c-lead reveal d2">People imagine a tooth as one solid white block, even a block of bone. Inside, it is the opposite of uniform: hard where it bites, tough underneath, and graded between the two.</div>
+<div class="myth reveal d3">
+<div class="myth-card assume">
+<div class="ml">The assumption</div>
+<div class="mh">One solid block</div>
+<div class="mp">Uniform all the way through.</div>
+<div class="mp">One hardness, surface to core.</div>
+<div class="mp">A crack, once started, runs unchecked.</div>
+</div>
+<div class="myth-card real">
+<div class="ml">The reality</div>
+<div class="mh">A graded composite</div>
+<div class="mp">A glass hard enamel shell at the surface.</div>
+<div class="mp">A tough dentin core beneath it.</div>
+<div class="mp">Welded by a graded DEJ, hard and tough at once.</div>
+</div>
+</div>
+<div class="spine3 reveal d4">
+<div class="spine3-card"><div class="s3-k">Structure</div><div class="s3-d">Enamel rods, dentin tubules, collagen, and the graded DEJ.</div></div>
+<div class="spine3-arw">&rarr;</div>
+<div class="spine3-card"><div class="s3-k">Property</div><div class="s3-d"><em>Modulus, hardness, toughness, thermal expansion.</em></div></div>
+<div class="spine3-arw">&rarr;</div>
+<div class="spine3-card"><div class="s3-k">Performance</div><div class="s3-d">Resists wear and fracture across a lifetime of bites.</div></div>
+</div>
+<div class="s3-cap reveal d4">Read the tooth this way and it becomes the <b>benchmark</b> every restorative is measured against.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Two Borrowed Tricks</div>
+<div class="c-title reveal d2">Like a Forged Blade, Like Reinforced <em>Concrete</em></div>
+<div class="c-lead reveal d2">Engineers already solved the tooth's problem twice. From a forged blade it borrows the <b>architecture</b>, from reinforced concrete the <b>principle</b>. Tap each card to map it onto the tooth.</div>
+<div class="grid2 reveal d3">
+<div class="flip-card fc-a" tabindex="0"><div class="flip-inner">
+<div class="flip-face flip-front"><span class="flip-ic"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span><div class="ff-title">Forged blade</div><div class="ff-tag">The architecture</div><div class="ff-hint">Tap to see it in the tooth</div></div>
+<div class="flip-face flip-back"><span class="flip-ic"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span><span class="fb-head">The blade in the tooth</span>
+<div class="map"><span class="k">Hard edge</span><span class="arw">&rarr;</span><span class="v">Enamel</span></div>
+<div class="map"><span class="k">Tough spine</span><span class="arw">&rarr;</span><span class="v">Dentin</span></div>
+<div class="map"><span class="k">The join</span><span class="arw">&rarr;</span><span class="v">The DEJ</span></div>
+<div class="fb-note">Two smith's tricks: san mai lamination, or differential heat treatment. The tooth uses both, enamel laminated onto dentin and graded across the DEJ.</div></div>
+</div></div>
+<div class="flip-card fc-b" tabindex="0"><div class="flip-inner">
+<div class="flip-face flip-front"><span class="flip-ic"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span><div class="ff-title">Reinforced concrete</div><div class="ff-tag">The principle</div><div class="ff-hint">Tap to see it in the tooth</div></div>
+<div class="flip-face flip-back"><span class="flip-ic"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span><span class="fb-head">The concrete in the tooth</span>
+<div class="map"><span class="k">Concrete</span><span class="arw">&rarr;</span><span class="v">Enamel</span></div>
+<div class="map"><span class="k">Steel rebar</span><span class="arw">&rarr;</span><span class="v">Collagen</span></div>
+<div class="map"><span class="k">The composite</span><span class="arw">&rarr;</span><span class="v">Both at once</span></div>
+<div class="fb-note">Brittle in tension, like enamel at <b>384 vs 10 MPa</b>. Most literal inside dentin: apatite is the concrete, collagen the rebar.</div></div>
+</div></div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">The point</div><div class="ct">A block of stone would shatter, a block of steel would wear and bend. The tooth is neither. It is a <b>graded composite</b> that borrows the blade's hard-surface-on-tough-body design and concrete's brittle-plus-tough reinforcement.</div></div></div>
+</div></section>
+
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">The Functional Demand</div>
+<div class="c-title reveal d2">What the Tooth <em>Endures</em></div>
+<div class="c-lead reveal d2">A restorative does not just fill a hole. It has to survive the same job the tooth already does: large, repeated, off axis loads, in a wet mouth that swings from hot to cold, for decades.</div>
+<div class="pgrid reveal d3">
+<div class="pcard"><div class="pk">How hard</div><div class="pd">Everyday chewing is light, about <b>10 to 180 N</b>. A hard clench reaches <b>400 to 800 N</b>, past <b>1000 N</b> in bruxism, with a recorded extreme over <b>4000 N</b>. Incisors take about a tenth of the molars.</div></div>
+<div class="pcard"><div class="pk">Which way</div><div class="pd">Cusps turn a straight bite into wedging, lateral, and shear forces. The tooth is loaded in compression, tension, and shear at once, rarely straight down.</div></div>
+<div class="pcard"><div class="pk">How often</div><div class="pd">About <b>a thousand</b> loading cycles a day, some <b>300,000 a year</b> and millions over a lifetime. Fatigue from repetition, not one overload, is what usually grows the crack that splits a tooth.</div></div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Why the numbers bite</div><div class="ct">Force concentrates. An <em>800 N</em> clench on a single cusp contact near <em>3.9 mm&sup2;</em> is roughly <em>205 MPa</em> of local stress. Whatever replaces enamel has to take that, thousands of times over. <span class="src-tag">(Phillips)</span></div></div></div>
+</div></section>
+
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Making Sense of the Units</div>
+<div class="c-title reveal d2">Force and Pressure, in <em>Plain Words</em></div>
+<div class="c-lead reveal d2">The tooth is loaded two ways: how hard it is pushed (force, in N) and how tightly that push is squeezed onto a spot (pressure, in MPa).</div>
+<div class="fp reveal d3">
+<div class="fp-card">
+<div class="fp-u">N</div>
+<div class="fp-lab">Force</div>
+<div class="fp-line">A small apple in your hand is about <b>1 N</b>.</div>
+<div class="fp-line">A hard bite reaches about <b>800 N</b>, five cinder blocks, or a giant panda, on one tooth.</div>
+</div>
+<div class="fp-card">
+<div class="fp-u">MPa</div>
+<div class="fp-lab">Pressure = force &divide; area</div>
+<div class="fp-line"><b>1 MPa</b> is 1 N pressed onto a 1 mm square, about <b>10&times;</b> the air around us.</div>
+<div class="fp-line">Running shoes spread your weight over a wide sole. High heels put the same weight on two tiny tips, so far more pressure. Same you, smaller area, bigger number.</div>
+<div class="fp-tooth">
+<div class="tt-h">A bite on a cusp reaches <b>200 to 400 MPa</b>, like:</div>
+<div class="fp-eg">a rifle barrel the instant it fires</div>
+<div class="fp-eg">about a thousand times the pressure under an elephant's foot</div>
+<div class="fp-eg">twice the crushing pressure of the deepest ocean</div>
+</div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">In the mouth</div><div class="ct">In a hard lateral excursion, much of the bite funnels through one functional cusp onto a small tip. Less force reaches that cusp than the full clench, but the contact shrinks from several mm&sup2; to about <em>1 mm&sup2;</em>, so the pressure rises: about <em>400 N</em> on <em>1 mm&sup2;</em> is near <em>400 MPa</em>, past enamel's <em>384 MPa</em> compressive limit, plus off-axis shear it resists poorly. That is why cracks and wear start at functional cusps.</div></div></div>
+</div></section>
+
+
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part One</div>
+<div class="sec-title reveal d2">The Tissues as <em>Biomaterials</em></div>
+<div class="sec-sub reveal d3">Two biocomposites built from the same mineral, engineered for opposite jobs. Meet enamel and dentin as materials before we measure them.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Two Biocomposites</div>
+<div class="c-title reveal d2">Same Mineral, <em>Opposite</em> Materials</div>
+<div class="c-lead reveal d2" style="margin-bottom:18px">Both are apatite plus organic, but the ratio changes everything. Enamel is a ceramic-dominated composite; dentin is a fiber-reinforced composite.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">Apatite-based biocomposite</span>
+<div class="kv"><span class="k">Reinforcement / matrix</span><span class="v">Apatite dominant</span></div>
+<div class="kv"><span class="k">Mineral (by volume)</span><span class="v">~92%</span></div>
+<div class="kv"><span class="k">Architecture</span><span class="v">Rods + interrod</span></div>
+<div class="kv"><span class="k">Character</span><span class="v">Stiff, hard, brittle</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Collagen-fiber-reinforced biocomposite</span>
+<div class="kv"><span class="k">Reinforcement / matrix</span><span class="v">Apatite in collagen</span></div>
+<div class="kv"><span class="k">Mineral (by volume)</span><span class="v">~50%</span></div>
+<div class="kv"><span class="k">Architecture</span><span class="v">Tubular, collagen matrix</span></div>
+<div class="kv"><span class="k">Character</span><span class="v">Compliant, tough</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Materials framing</div><div class="ct">Enamel behaves near the <b>ceramic</b> end of the spectrum, dentin near a <b>tough composite</b>. That single contrast, <em>stiff armor over tough foundation</em>, drives almost every property in this lecture.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Composition <span class="kt">The Structure Corner</span></div>
+<div class="c-title reveal d2">What They Are <em>Made Of</em></div>
+<div class="c-lead reveal d2">The single number that predicts almost everything downstream is the <strong>mineral fraction</strong>. Enamel is nearly all apatite; dentin reserves a third of its volume for the collagen that makes it tough. Toggle the basis, and hover a band to read its value.</div>
+<div class="comp-top reveal d3">
+<div class="comp-legend">
+<div class="comp-lg"><span class="sw sw-m"></span><b>Mineral</b> apatite</div>
+<div class="comp-lg"><span class="sw sw-o"></span><b>Organic</b> collagen</div>
+<div class="comp-lg"><span class="sw sw-w"></span><b>Water</b> and fluid</div>
+</div>
+<div class="comp-ctl" id="compCtl"><span class="comp-thumb" id="compThumb"></span><button class="comp-b active" data-b="volume">By volume</button><button class="comp-b" data-b="weight">By weight</button></div>
+</div>
+<div class="comp-chart reveal d3" id="compChart">
+<div class="comp-barrow">
+<div class="comp-blabel"><div class="comp-bname">Enamel</div><div class="comp-btag">The Armor</div></div>
+<div class="comp-bar">
+<div class="comp-seg comp-m" data-t="Enamel" data-n="Mineral" data-k="m" id="em"><span class="comp-sv"></span></div>
+<div class="comp-seg comp-o" data-t="Enamel" data-n="Organic" data-k="o" id="eo"><span class="comp-sv"></span></div>
+<div class="comp-seg comp-w" data-t="Enamel" data-n="Water" data-k="w" id="ew"><span class="comp-sv"></span></div>
+</div>
+</div>
+<div class="comp-barrow">
+<div class="comp-blabel"><div class="comp-bname">Dentin</div><div class="comp-btag">The Foundation</div></div>
+<div class="comp-bar">
+<div class="comp-seg comp-m" data-t="Dentin" data-n="Mineral" data-k="m" id="dm"><span class="comp-sv"></span></div>
+<div class="comp-seg comp-o" data-t="Dentin" data-n="Organic" data-k="o" id="do"><span class="comp-sv"></span></div>
+<div class="comp-seg comp-w" data-t="Dentin" data-n="Water" data-k="w" id="dw"><span class="comp-sv"></span></div>
+</div>
+</div>
+</div>
+<div class="comp-readout reveal d3" id="compReadout"><span class="rhint">Hover or tap any band to read its exact share.</span></div>
+<div class="src reveal d4">By volume: enamel about 92 / 2 / 6, dentin about 50 / 30 / 20 (Craig's three-way split). By weight: enamel about 96 / 1 / 3, dentin about 70 / 20 / 10. Sources: Craig's Restorative Dental Materials; Phillips' Science of Dental Materials.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">The Shared Phase</div>
+<div class="c-title reveal d2">Apatite, the Common <em>Building Block</em></div>
+<div class="c-lead reveal d2">Both tissues are built on hydroxyapatite, Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>(OH)<sub>2</sub>, with a Ca to P ratio of <strong>1.67</strong>. But biological apatite is not the pure mineral: it is carbonated and calcium-deficient, which makes it more soluble and sets up the caries chemistry later.</div>
+<div class="grid2 reveal d3">
+<div class="panel"><div class="num gm" style="font-size:26px;margin-bottom:4px">1.67</div><div style="font-family:'Montserrat';font-weight:700;color:var(--ink);margin-bottom:4px">Ca : P ratio</div><div style="color:var(--ink-mid);font-size:14.5px">Stoichiometric hydroxyapatite. Biological apatite runs calcium-deficient and carbonate-substituted.</div></div>
+<div class="panel"><div class="num" style="font-size:20px;margin-bottom:4px">Carbonated, Ca-deficient</div><div style="font-family:'Montserrat';font-weight:700;color:var(--ink);margin-bottom:4px">Why it dissolves</div><div style="color:var(--ink-mid);font-size:14.5px">Substitutions distort the lattice and raise solubility, so real enamel dissolves more easily than the textbook crystal.</div></div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Sets up later</div><div class="ct">Keep this in mind for remineralization: fluoride will not make pure fluorapatite, it makes a less-soluble, <em>fluorapatite-like</em> apatite. We return to that in Part Six.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Enamel <span class="kt">The Armor</span></div>
+<div class="c-title reveal d2">A High-Mineral <em>Ceramic</em> Composite</div>
+<div class="c-lead reveal d2">Roughly <strong>92% mineral by volume</strong> (about 96% by weight), a few percent water, under 1% protein. Apatite crystallites pack into rods; in the inner enamel the rods decussate, weaving in alternating layers that block cracks. Hardness and modulus rise from the DEJ to the surface, while fracture resistance rises inward where that weave is densest, making the whole far tougher than pure apatite (Kruzic 2023). It is acellular, so it cannot repair itself.</div>
+<div class="reveal d3" style="width:100%;max-width:900px">
+<div class="feat"><span class="fchip"><b>Rods + interrod</b> woven architecture</span><span class="fchip"><b>Decussation</b> and Hunter-Schreger bands</span><span class="fchip"><b>Graded</b> surface to DEJ</span><span class="fchip"><b>Acellular</b>, no repair</span></div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Functionally graded</div><div class="ct">Hardness and stiffness are <b>highest at the occlusal surface</b> and fall toward the DEJ, so enamel is engineered stiffest where the load lands (Cuy 2002; Habelitz 2001).</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Dentin <span class="kt">The Foundation</span></div>
+<div class="c-title reveal d2">A Collagen-Reinforced <em>Tough</em> Composite</div>
+<div class="c-lead reveal d2">Craig's volume split: about <strong>50% mineral, 30% organic</strong> (almost all type I collagen), and <strong>20% fluid</strong>. That collagen matrix is what makes dentin tough. Its signature is the tubule: a fluid-filled channel that changes across the tissue.</div>
+<div class="grid2 reveal d3">
+<div class="tissue de"><span class="t-name">Tubule gradient</span><span class="t-tag">Marshall 1997</span>
+<div class="kv"><span class="k">Diameter, pulp to DEJ</span><span class="v">2.5 to 0.8 &micro;m</span></div>
+<div class="kv"><span class="k">Area, pulp to DEJ</span><span class="v">~22% to ~1%</span></div>
+<div class="kv"><span class="k">Wetness</span><span class="v">Rises toward pulp</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Structure and life</span><span class="t-tag">Vital, remodels</span>
+<div class="kv"><span class="k">Peritubular</span><span class="v">Highly mineralized cuff</span></div>
+<div class="kv"><span class="k">Intertubular</span><span class="v">Collagen-rich matrix</span></div>
+<div class="kv"><span class="k">Types</span><span class="v">Primary to sclerotic</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Bonding preview</div><div class="ct">Deeper dentin is <b>wetter and more tubular</b>, so it is a harder, more variable bonding substrate than enamel. Unlike enamel, dentin is vital and can lay down reparative and sclerotic dentin.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">The Dentin-Enamel Junction</div>
+<div class="c-title reveal d2">A <em>Graded</em> Interface Between Two Biocomposites</div>
+<div class="c-lead reveal d2">The DEJ is not a glue line, it is a functionally graded seam where properties change in a smooth, sigmoidal transition from dentin into enamel, with collagen fibrils crossing it. The functional width is only about <strong>2 to 3 &micro;m</strong>, wider under the occlusal cusps and narrower at the cervical, while the scalloped junction spans a coarser <strong>25 to 100 &micro;m</strong>. Either way, it binds a brittle ceramic to a tough composite without a weak boundary.</div>
+<div class="grid2 reveal d3">
+<div class="panel"><div class="num" style="font-size:20px;margin-bottom:4px">~2 to 3 &micro;m</div><div style="font-family:'Montserrat';font-weight:700;color:var(--ink);margin-bottom:4px">Functional width</div><div style="color:var(--ink-mid);font-size:14.5px">Functional width by AFM nanoscratching and modulus mapping (Habelitz 2001, Wang 2018); older nanoindentation read wider because its ~1 &micro;m probe oversamples the seam.</div></div>
+<div class="panel"><div class="num" style="font-size:20px;margin-bottom:4px">Crack arrest</div><div style="font-family:'Montserrat';font-weight:700;color:var(--ink);margin-bottom:4px">Imbeni 2005</div><div style="color:var(--ink-mid);font-size:14.5px">Cracks from brittle enamel run through the optical junction and <b>arrest in the tougher mantle dentin</b> beyond it, so enamel rarely debonds.</div></div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Materials lesson</div><div class="ct">The tooth solves the classic engineering problem of <em>joining dissimilar materials</em> with a graded interface rather than a sharp bond, which is exactly why it resists interfacial failure.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Pulp and Dentin</div>
+<div class="c-title reveal d2">Dentin Is a <em>Living</em> Tissue</div>
+<div class="c-lead reveal d2">While the pulp is vital, dentin is not inert. Odontoblasts lining the pulp keep building and repairing it, and dentinal fluid keeps it hydrated. That upkeep is why dentin behaves the way it does.</div>
+<div class="pgrid reveal d3">
+<div class="pcard"><div class="pk">It keeps forming</div><div class="pd">Odontoblasts lay down secondary dentin for life and tertiary dentin under attack. The tooth thickens its own walls and seals off insults from the inside.</div></div>
+<div class="pcard"><div class="pk">It stays hydrated</div><div class="pd">Dentinal fluid fills the tubules. Hydrated dentin is less stiff and better at blunting cracks, near <b>25 GPa</b> wet against <b>28 GPa</b> dry. Moisture is structural, not incidental.</div></div>
+<div class="pcard"><div class="pk">It can feel</div><div class="pd">The pulp makes dentin sensitive, and that pain is protective. It caps how hard a person dares to load the tooth in the first place.</div></div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Structure to property</div><div class="ct">Dentin is itself a graded composite, hard peritubular cuffs near <em>40 GPa</em> around a softer intertubular matrix near <em>17 GPa</em>. A living, hydrated core is what lets the hard enamel shell survive. <span class="src-tag">(Kinney)</span></div></div></div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part Two</div>
+<div class="sec-title reveal d2">How We <em>Measure</em> Them</div>
+<div class="sec-sub reveal d3">Every value in that datasheet came from a test, and the test shapes the number. Before we compare the tissues to materials, we need to know what each method actually captures.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Characterization <span class="kt">The Toolkit</span></div>
+<div class="c-title reveal d2">One Property, <em>One</em> Test</div>
+<div class="c-lead reveal d2" style="margin-bottom:16px">To put a number on a tissue you pick a test, and each test probes a different response at a different length scale. This is the toolkit behind the datasheet.</div>
+<div class="panel reveal d3" style="padding:16px 22px;width:100%;max-width:960px">
+<table class="dsheet">
+<thead><tr><th>Property</th><th>Method</th><th>What it captures</th><th>Scale</th></tr></thead>
+<tbody>
+<tr><td class="p">Stiffness</td><td class="m">Nanoindentation, compression</td><td>Elastic modulus, resistance to deforming</td><td class="m">nm to mm</td></tr>
+<tr><td class="p">Hardness</td><td class="m">Knoop, Vickers, nanoindentation</td><td>Resistance to permanent indentation</td><td class="m">&micro;m</td></tr>
+<tr><td class="p">Toughness</td><td class="m">Notched-beam, indentation crack</td><td>Resistance to crack growth</td><td class="m">mm</td></tr>
+<tr><td class="p">Fatigue</td><td class="m">Cyclic loading</td><td>Life under repeated load</td><td class="m">bulk</td></tr>
+<tr><td class="p">Thermal</td><td class="m">Dilatometry</td><td>Expansion per degree</td><td class="m">bulk</td></tr>
+<tr><td class="p">Optical</td><td class="m">Spectrophotometry, refractometry</td><td>Color, translucency, refractive index</td><td class="m">bulk</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout reveal d4"><div><div class="cl">The rule</div><div class="ct">The method defines the number. A modulus from slow compression is <b>not</b> the same modulus as one from fast nanoindentation, and a bulk average hides the gradients a nanoscale test reveals.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Characterization <span class="kt">Indentation</span></div>
+<div class="c-title reveal d2">One Indent, <em>Two</em> Numbers</div>
+<div class="c-lead reveal d2">Press a hard tip into the surface and record load against depth. The residual area gives hardness; the slope of the unloading curve gives elastic modulus. Shrink the indent from milli to nano and you can probe a single enamel rod or the wall of one tubule.</div>
+<div class="grid2 reveal d3">
+<div class="panel" style="padding:18px 20px">
+<div style="font-family:'Montserrat';font-weight:700;color:var(--ink);font-size:15px;margin-bottom:8px">What one indent gives you</div>
+<div class="kv"><span class="k">Hardness (H)</span><span class="v">Load / residual area</span></div>
+<div class="kv"><span class="k">Modulus (E)</span><span class="v">Unloading slope</span></div>
+<div class="kv"><span class="k">Resolution</span><span class="v">Milli to nano</span></div>
+<div class="kv"><span class="k">Nano probes</span><span class="v">Single rods, tubule walls</span></div>
+</div>
+<div class="panel" style="padding:18px 20px">
+<div style="font-family:'Montserrat';font-weight:700;color:var(--ink);font-size:15px;margin-bottom:8px">From macro to nano</div>
+<div class="kv"><span class="k">Macro</span><span class="v">Brinell, whole-tooth scale</span></div>
+<div class="kv"><span class="k">Micro</span><span class="v">Knoop, Vickers, across a section</span></div>
+<div class="kv"><span class="k">Nano</span><span class="v">Single rods, tubule walls</span></div>
+<div class="kv"><span class="k">Smaller indent</span><span class="v">Finer structure resolved</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Why nano</div><div class="ct">Nanoindentation resolves the surface-to-DEJ <b>gradient</b> in enamel (Cuy 2002) and the parallel-versus-perpendicular <b>anisotropy</b> (Habelitz 2001) that a bulk test averages away.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Characterization <span class="kt">Why the number moves</span></div>
+<div class="c-title reveal d2">The Same Tissue, <em>Two</em> Moduli</div>
+<div class="c-lead reveal d2">Elastic modulus in GPa, measured two ways. Slow compression reads the relaxed response; fast nanoindentation reads the instantaneous one. The tissue did not change, the timescale did, and that gap is viscoelasticity, most pronounced in hydrated dentin.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel modulus</span><span class="t-tag">Measured two ways</span>
+<div class="kv"><span class="k">Compression, slow</span><span class="v">~80 GPa</span></div>
+<div class="kv"><span class="k">Nanoindentation, fast</span><span class="v">~80 GPa</span></div>
+<div class="kv"><span class="k">Reading</span><span class="v">Minimal gap</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin modulus</span><span class="t-tag">Measured two ways</span>
+<div class="kv"><span class="k">Compression, slow (relaxed)</span><span class="v">11.7 GPa</span></div>
+<div class="kv"><span class="k">Nanoindentation, fast (instantaneous)</span><span class="v">18 to 25 GPa</span></div>
+<div class="kv"><span class="k">Reading</span><span class="v">Viscoelastic gap</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Read it right</div><div class="ct">The dentin gap is <b>not an error and not outdated data</b>. Under a fast load dentin behaves stiffer, under a slow load it relaxes and gives. Always report the method with the number. Values from Phillips and Kinney 2003.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Characterization <span class="kt">Conditions Matter</span></div>
+<div class="c-title reveal d2">Direction, Hydration, and <em>Rate</em></div>
+<div class="c-lead reveal d2">The same tissue gives different numbers depending on which way you load it, whether it is wet, and how fast. Report the conditions, or the value means little.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Direction, enamel</span><span class="t-tag">Anisotropy, Habelitz 2001</span>
+<div class="kv"><span class="k">Modulus, parallel to rods</span><span class="v">89 GPa</span></div>
+<div class="kv"><span class="k">Modulus, perpendicular</span><span class="v">68 GPa</span></div>
+<div class="kv"><span class="k">Enamel anisotropy</span><span class="v">Pronounced</span></div>
+<div class="kv"><span class="k">Dentin anisotropy</span><span class="v">Modest, debated</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Hydration and rate, dentin</span><span class="t-tag">Kinney 2003</span>
+<div class="kv"><span class="k">Wet versus dry</span><span class="v">Dry reads stiffer, brittle</span></div>
+<div class="kv"><span class="k">Physiological state</span><span class="v">Hydrated</span></div>
+<div class="kv"><span class="k">Loading rate</span><span class="v">Faster reads stiffer</span></div>
+<div class="kv"><span class="k">Behavior</span><span class="v">Viscoelastic</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">The habit to build</div><div class="ct">State dentin properties with <b>direction, hydration, and strain rate</b>, and note the rod orientation for enamel. A value without its conditions is not comparable to anything.</div></div></div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part Three</div>
+<div class="sec-title reveal d2">Mechanical <em>Behavior</em> Under Load</div>
+<div class="sec-sub reveal d3">Now the properties themselves: how stiff, how hard, how strong, and how tough. And why enamel and dentin sit at opposite ends of every one of them.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Mechanical <span class="kt">Stiffness</span></div>
+<div class="c-title reveal d2">Rigid Armor on a <em>Compliant</em> Base</div>
+<div class="c-lead reveal d2">Elastic modulus is resistance to elastic deformation. Enamel is roughly four times stiffer than dentin, so under load it barely flexes while the dentin gives slightly beneath it. That mismatch is a feature: the compliant base lets the rigid shell spread force instead of cracking.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">Stiff, rigid</span>
+<div class="kv"><span class="k">Modulus</span><span class="v">~80 GPa</span></div>
+<div class="kv"><span class="k">Under load</span><span class="v">Barely flexes</span></div>
+<div class="kv"><span class="k">Role</span><span class="v">Distributes force</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Compliant</span>
+<div class="kv"><span class="k">Modulus</span><span class="v">~18 to 25 GPa</span></div>
+<div class="kv"><span class="k">Under load</span><span class="v">Flexes, absorbs</span></div>
+<div class="kv"><span class="k">Role</span><span class="v">Cushions the shell</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">Remove the dentin support (a deep preparation, an undermined cusp) and rigid enamel flexes past its limit and chips. Keep a <b>sound dentin floor</b> and cover undermined cusps.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Mechanical <span class="kt">Hardness and Wear</span></div>
+<div class="c-title reveal d2">The Hardest Tissue in the <em>Body</em></div>
+<div class="c-lead reveal d2">Hardness is resistance to permanent indentation, and it tracks mineral content. Enamel is the hardest tissue in the body, built to resist wear across a lifetime of chewing contacts. Dentin, with half the mineral, is far softer.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">Wear-resistant</span>
+<div class="kv"><span class="k">Knoop</span><span class="v">340 to 430</span></div>
+<div class="kv"><span class="k">Nanoindentation</span><span class="v">3.2 to 3.6 GPa</span></div>
+<div class="kv"><span class="k">Behavior</span><span class="v">Resists abrasion</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Softer</span>
+<div class="kv"><span class="k">Knoop</span><span class="v">~70</span></div>
+<div class="kv"><span class="k">Nanoindentation</span><span class="v">~0.6 GPa</span></div>
+<div class="kv"><span class="k">Behavior</span><span class="v">Abrades once exposed</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">A material harder than enamel wears the <b>opposing natural tooth</b>. Match wear resistance to enamel rather than exceeding it, and remember that worn or eroded surfaces expose soft dentin that abrades fast.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Mechanical <span class="kt">Strength</span></div>
+<div class="c-title reveal d2">Strong in Compression, <em>Weak</em> in Tension</div>
+<div class="c-lead reveal d2">Strength is the stress a tissue carries before it fails, and it depends on the direction of loading. Enamel is strong in compression but very weak in tension, the signature of a brittle ceramic. Dentin is more balanced and far stronger in tension.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">Brittle ceramic</span>
+<div class="kv"><span class="k">Compressive</span><span class="v">384 MPa</span></div>
+<div class="kv"><span class="k">Tensile</span><span class="v">10 MPa</span></div>
+<div class="kv"><span class="k">The flip</span><span class="v">~38x weaker in tension</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Balanced</span>
+<div class="kv"><span class="k">Compressive</span><span class="v">297 MPa</span></div>
+<div class="kv"><span class="k">Tensile</span><span class="v">52 MPa</span></div>
+<div class="kv"><span class="k">The flip</span><span class="v">~6x weaker in tension</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Why the foundation matters</div><div class="ct">Bite forces bend the enamel shell, and the tensile side is where a crack starts. Enamel cannot carry that tension, so the <b>tough dentin beneath carries it</b>. This is the datasheet's tensile flip made physical. (Phillips)</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Mechanical <span class="kt">Toughness</span></div>
+<div class="c-title reveal d2">Harder Is <em>Not</em> Tougher</div>
+<div class="c-lead reveal d2">Toughness is resistance to crack growth, and here the ranking flips. Enamel is hard but brittle, with low toughness. Dentin is softer yet about three times tougher. The property that resists wear is not the property that resists fracture.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">Hard, brittle</span>
+<div class="kv"><span class="k">Fracture toughness</span><span class="v">0.5 to 1.3</span></div>
+<div class="kv"><span class="k">Unit</span><span class="v">MPa&middot;m&frac12;</span></div>
+<div class="kv"><span class="k">Crack behavior</span><span class="v">Runs easily</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Tough</span>
+<div class="kv"><span class="k">Fracture toughness</span><span class="v">1.3 to 3.1</span></div>
+<div class="kv"><span class="k">Versus enamel</span><span class="v">~3x tougher</span></div>
+<div class="kv"><span class="k">Crack behavior</span><span class="v">Arrests cracks</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Read it right</div><div class="ct">Hardness and toughness are <b>different properties</b>. A rigid, hard restoration with nothing to arrest a crack fails the same way unsupported enamel does. (Xu 1998; Kinney 2003)</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Mechanical <span class="kt">Toughening</span></div>
+<div class="c-title reveal d2">Why the Tooth Does Not <em>Shatter</em></div>
+<div class="c-lead reveal d2">A block of pure enamel apatite should be as fragile as chalk, yet teeth survive decades of loading. The tooth borrows every toughening trick in materials engineering to stop cracks before they run.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel: deflection</span><span class="t-tag">Rod decussation</span>
+<div class="kv"><span class="k">Structure</span><span class="v">Hunter-Schreger bands</span></div>
+<div class="kv"><span class="k">Effect</span><span class="v">Cracks twist and deflect</span></div>
+<div class="kv"><span class="k">Cost to a crack</span><span class="v">Longer, slower path</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin: bridging</span><span class="t-tag">Collagen and tubules</span>
+<div class="kv"><span class="k">Collagen fibrils</span><span class="v">Bridge crack faces</span></div>
+<div class="kv"><span class="k">Tubules</span><span class="v">Blunt the crack tip</span></div>
+<div class="kv"><span class="k">Effect</span><span class="v">Absorbs energy</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">The last line</div><div class="ct">Cracks from brittle enamel run to the junction and <b>arrest in the tougher mantle dentin</b> beyond it (Imbeni 2005). Deflection, bridging, and crack arrest together make a brittle mineral behave tough.</div></div></div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part Four</div>
+<div class="sec-title reveal d2">Physical <em>Properties</em></div>
+<div class="sec-sub reveal d3">Beyond load: how the tissues handle heat, light, and X-rays. These decide sensitivity at the margin, shade matching, and what you read on a radiograph.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Physical <span class="kt">Thermal</span></div>
+<div class="c-title reveal d2">Barely Moves with <em>Temperature</em></div>
+<div class="c-lead reveal d2">Thermal expansion is how much a material grows and shrinks as it heats and cools. Enamel and dentin barely move; most restorative materials move two to four times more, and every hot and cold cycle works that mismatch at the margin.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Tooth</span><span class="t-tag">Low expansion</span>
+<div class="kv"><span class="k">Enamel</span><span class="v">11.4 ppm/&deg;C</span></div>
+<div class="kv"><span class="k">Dentin</span><span class="v">8.3 ppm/&deg;C</span></div>
+<div class="kv"><span class="k">Behavior</span><span class="v">Stable</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Restoratives</span><span class="t-tag">High expansion</span>
+<div class="kv"><span class="k">Composite</span><span class="v">14 to 50 ppm/&deg;C</span></div>
+<div class="kv"><span class="k">Amalgam</span><span class="v">25 ppm/&deg;C</span></div>
+<div class="kv"><span class="k">Versus tooth</span><span class="v">2 to 4x more</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">The mismatch drives <b>percolation</b>: the margin gaps open and close with every hot and cold cycle, pumping fluid in and out. Over time that means marginal stain, sensitivity, and recurrent caries. (Phillips)</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Physical <span class="kt">Optical</span></div>
+<div class="c-title reveal d2">How Much Light Gets <em>Through</em></div>
+<div class="c-lead reveal d2">Translucency is how much light a tissue transmits rather than absorbs or scatters. The translucency parameter (TP) captures it: the color difference of a 1 mm specimen read over a black backing versus a white one, higher meaning more translucent. Human enamel measures about 18.7 and dentin about 16.4, so enamel is more translucent, but dentin is nowhere near opaque.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">More translucent</span>
+<div class="kv"><span class="k">Translucency parameter</span><span class="v">18.7 at 1 mm</span></div>
+<div class="kv"><span class="k">Refractive index</span><span class="v">~1.63</span></div>
+<div class="kv"><span class="k">Light</span><span class="v">Transmits inward</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Less translucent, not opaque</span>
+<div class="kv"><span class="k">Translucency parameter</span><span class="v">16.4 at 1 mm</span></div>
+<div class="kv"><span class="k">Refractive index</span><span class="v">~1.54</span></div>
+<div class="kv"><span class="k">Contrast ratio</span><span class="v">0.55 (opaque = 1.0)</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Where the light turns around: the DEJ</div><div class="ct">Most of a tooth's internal reflection and scattering happens <b>at the DEJ</b>, where enamel (n 1.63) meets dentin (n 1.54). That refractive-index step, across a scalloped and graded junction, diffuses the light and sends dentin's color back out through the translucent enamel. TP from Lee 2009; refractive index from Meng 2009.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Physical <span class="kt">Optical, the Vital Look</span></div>
+<div class="c-title reveal d2">Opalescence and <em>Fluorescence</em></div>
+<div class="c-lead reveal d2">Two more effects give a tooth its living appearance. Opalescence: nanoscale apatite scatters short wavelengths, so enamel reads faintly blue in reflected light and warm orange in transmitted light. Fluorescence: the tooth absorbs ultraviolet and re-emits visible light, adding brightness.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Opalescence</span><span class="t-tag">Enamel</span>
+<div class="kv"><span class="k">Reflected light</span><span class="v">Faint blue</span></div>
+<div class="kv"><span class="k">Transmitted light</span><span class="v">Warm orange</span></div>
+<div class="kv"><span class="k">Cause</span><span class="v">Nanoscale scattering</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Fluorescence</span><span class="t-tag">Whole tooth</span>
+<div class="kv"><span class="k">Trigger</span><span class="v">Ultraviolet light</span></div>
+<div class="kv"><span class="k">Emission</span><span class="v">Blue-white glow</span></div>
+<div class="kv"><span class="k">Stronger in</span><span class="v">Dentin than enamel</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">Natural shade is layered: translucent enamel over chromatic dentin, plus opalescence and fluorescence. A flat single-shade filling misses this, and a restorative with no fluorescing agent <b>looks like a missing tooth under a black light</b>. (Phillips)</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Physical <span class="kt">Radiographic</span></div>
+<div class="c-title reveal d2">Dense Enamel Reads <em>Bright</em></div>
+<div class="c-lead reveal d2">Radiopacity tracks mineral density. Enamel, near-pure apatite, is markedly more radiopaque than dentin and reads bright white; dentin is greyer, the pulp darker still. That contrast is how you read the junction, caries depth, and restorations.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Enamel</span><span class="t-tag">Highly radiopaque</span>
+<div class="kv"><span class="k">Mineral</span><span class="v">~92%, dense</span></div>
+<div class="kv"><span class="k">Appearance</span><span class="v">Bright white</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Dentin</span><span class="t-tag">Less radiopaque</span>
+<div class="kv"><span class="k">Mineral</span><span class="v">~50%, less dense</span></div>
+<div class="kv"><span class="k">Appearance</span><span class="v">Grey</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">Caries reads as a radiolucent shadow advancing through enamel to the DEJ, then spreading in the softer dentin. A restorative must be <b>radiopaque enough to be told apart</b> from recurrent caries.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">The Benchmark Datasheet</div>
+<div class="c-title reveal d2">Enamel and Dentin, <em>Specced</em></div>
+<div class="c-lead reveal d2" style="margin-bottom:16px">Everything on one page. This is the reference the restorative materials will be measured against for the rest of the course, and the two rows each for modulus and hardness are the reminder that the method sets the number.</div>
+<div class="panel reveal d3" style="padding:18px 22px;width:100%;max-width:960px">
+<table class="dsheet">
+<thead><tr><th>Property</th><th class="rt">Enamel</th><th class="rt">Dentin</th><th>Method</th></tr></thead>
+<tbody>
+<tr><td class="p">Mineral (vol%)</td><td class="val rt">~92%</td><td class="val rt">~50%</td><td class="m">Composition</td></tr>
+<tr><td class="p">Elastic modulus</td><td class="val rt">~80 GPa</td><td class="val rt">~18 to 25 GPa</td><td class="m">Nanoindentation</td></tr>
+<tr><td class="p">Elastic modulus</td><td class="val rt">~80 GPa</td><td class="val rt">11.7 GPa</td><td class="m">Compression</td></tr>
+<tr><td class="p">Hardness</td><td class="val rt">3.2 to 3.6 GPa</td><td class="val rt">~0.6 GPa</td><td class="m">Nanoindentation</td></tr>
+<tr><td class="p">Hardness</td><td class="val rt">340 to 430</td><td class="val rt">~70</td><td class="m">Knoop</td></tr>
+<tr><td class="p">Compressive strength</td><td class="val rt">384 MPa</td><td class="val rt">297 MPa</td><td class="m">Compression</td></tr>
+<tr><td class="p">Tensile strength</td><td class="val rt">10 MPa</td><td class="val rt">52 MPa</td><td class="m">Tension</td></tr>
+<tr><td class="p">Fracture toughness</td><td class="val rt">0.5 to 1.3</td><td class="val rt">1.3 to 3.1</td><td class="m">Notch, MPa&middot;m&frac12;</td></tr>
+<tr><td class="p">Thermal expansion</td><td class="val rt">~11.4</td><td class="val rt">~8.3</td><td class="m">Dilatometry, ppm/&deg;C</td></tr>
+<tr><td class="p">Refractive index</td><td class="val rt">~1.63</td><td class="val rt">~1.54</td><td class="m">Optical</td></tr>
+<tr><td class="p">Translucency parameter</td><td class="val rt">18.7</td><td class="val rt">16.4</td><td class="m">1 mm, over black vs white</td></tr>
+</tbody>
+</table>
+</div>
+<div class="src reveal d4">Sources: Phillips, Kinney 2003, Xu 1998, Habelitz 2001, Cuy 2002; refractive index and translucency parameter from Meng 2009 and Lee 2009. Enamel is weak in tension (10 MPa) while dentin is far stronger (52 MPa), which is why brittle enamel needs a sound dentin foundation. Cementum hardness (Knoop) is about 40, refractive index about 1.58.</div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part Five</div>
+<div class="sec-title reveal d2">Benchmarking the <em>Materials</em></div>
+<div class="sec-sub reveal d3">The datasheet is the target. Now hold each restorative class up against it, property by property, and see where it matches the tooth and where it does not.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Benchmarking <span class="kt">Stiffness</span></div>
+<div class="c-title reveal d2">The Modulus <em>Spectrum</em></div>
+<div class="c-lead reveal d2" style="margin-bottom:14px">Ranked by elastic modulus, the materials span two orders of magnitude, with enamel and dentin sitting in the middle. Match the modulus and load transfers smoothly; miss it and stress concentrates.</div>
+<div class="panel reveal d3" style="padding:14px 22px;width:100%;max-width:820px">
+<table class="dsheet">
+<thead><tr><th>Material</th><th class="rt">Elastic modulus (GPa)</th><th>Position</th></tr></thead>
+<tbody>
+<tr><td class="p">PMMA, provisional</td><td class="val rt">2 to 3</td><td class="m">Far below dentin</td></tr>
+<tr><td class="p">Resin composite</td><td class="val rt">5 to 30</td><td class="m">Around dentin</td></tr>
+<tr><td class="p">Glass ionomer</td><td class="val rt">10 to 16</td><td class="m">Around dentin</td></tr>
+<tr><td class="p">Dentin</td><td class="val rt">18 to 25</td><td class="m">Reference tissue</td></tr>
+<tr><td class="p">Amalgam</td><td class="val rt">40 to 60</td><td class="m">Dentin to enamel</td></tr>
+<tr><td class="p">Enamel</td><td class="val rt">~80</td><td class="m">Reference tissue</td></tr>
+<tr><td class="p">Lithium disilicate</td><td class="val rt">~95</td><td class="m">Near enamel</td></tr>
+<tr><td class="p">Titanium</td><td class="val rt">~110</td><td class="m">Above enamel</td></tr>
+<tr><td class="p">Zirconia</td><td class="val rt">~205</td><td class="m">Far above enamel</td></tr>
+</tbody>
+</table>
+</div>
+<div class="src reveal d4">Composite and glass ionomer from Peskersoy 2017 and Phillips; lithium disilicate 95 GPa, titanium 110 GPa, zirconia 200 to 208 GPa from the implant and ceramic literature. A restoration far stiffer than the tooth, like zirconia, concentrates stress at its margins and on the opposing tooth.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Benchmarking <span class="kt">Thermal Expansion</span></div>
+<div class="c-title reveal d2">Match the Tooth, or <em>Leak</em></div>
+<div class="c-lead reveal d2" style="margin-bottom:14px">Enamel expands at 11.4 ppm per degree. The closer a material sits to that, the quieter the margin. Glass ionomer, gold, and titanium sit close; porcelain runs a little low; amalgam, composite, and acrylic move far more and leak.</div>
+<div class="panel reveal d3" style="padding:14px 22px;width:100%;max-width:820px">
+<table class="dsheet">
+<thead><tr><th>Material</th><th class="rt">CTE (ppm/&deg;C)</th><th class="rt">Ratio to enamel</th></tr></thead>
+<tbody>
+<tr><td class="p">Porcelain</td><td class="val rt">6.6</td><td class="val rt">0.58</td></tr>
+<tr><td class="p">Dentin</td><td class="val rt">8.3</td><td class="val rt">0.73</td></tr>
+<tr><td class="p">Titanium</td><td class="val rt">8.5</td><td class="val rt">0.75</td></tr>
+<tr><td class="p">Glass ionomer</td><td class="val rt">11.0</td><td class="val rt">0.96</td></tr>
+<tr><td class="p">Enamel</td><td class="val rt">11.4</td><td class="val rt">1.00</td></tr>
+<tr><td class="p">Gold alloys</td><td class="val rt">13.5 to 14.8</td><td class="val rt">1.2 to 1.3</td></tr>
+<tr><td class="p">Amalgam</td><td class="val rt">25.0</td><td class="val rt">2.19</td></tr>
+<tr><td class="p">Composite</td><td class="val rt">14 to 50</td><td class="val rt">1.2 to 4.4</td></tr>
+<tr><td class="p">Acrylic resin</td><td class="val rt">81.0</td><td class="val rt">7.11</td></tr>
+</tbody>
+</table>
+</div>
+<div class="src reveal d4">Values from Phillips. The mismatch drives percolation at the margin, so a large gap here means marginal stain, sensitivity, and recurrent caries over time.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Benchmarking <span class="kt">Wear and Esthetics</span></div>
+<div class="c-title reveal d2">Kind to the Opposing Tooth, and <em>Believable</em></div>
+<div class="c-lead reveal d2">Two more axes decide clinical success. A material much harder than enamel wears the opposing natural tooth, and a material that cannot reproduce enamel's translucency will never disappear.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Hardness and wear</span><span class="t-tag">Knoop and Vickers</span>
+<div class="kv"><span class="k">Amalgam</span><span class="v">~90</span></div>
+<div class="kv"><span class="k">Enamel</span><span class="v">~340 to 430 (Knoop)</span></div>
+<div class="kv"><span class="k">Ceramic</span><span class="v">~420</span></div>
+<div class="kv"><span class="k">Zirconia</span><span class="v">~1250</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Translucency</span><span class="t-tag">TP at 1 mm</span>
+<div class="kv"><span class="k">Enamel</span><span class="v">18.7</span></div>
+<div class="kv"><span class="k">Glass-ceramic</span><span class="v">~15</span></div>
+<div class="kv"><span class="k">Composite</span><span class="v">Matches by shade</span></div>
+<div class="kv"><span class="k">Amalgam, metal</span><span class="v">Opaque</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Read it together</div><div class="ct">Zirconia is far harder than enamel, so a rough zirconia surface can abrade the opposing tooth; polished, it is kinder. Glass-ceramics come closest to enamel translucency, while metals are opaque. Hardness from the restorative literature; enamel and TP as before.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Benchmarking <span class="kt">The Verdict</span></div>
+<div class="c-title reveal d2">No Material Matches <em>Everything</em></div>
+<div class="c-lead reveal d2">Line the axes up and the pattern is clear: each class wins some and loses others. Selection is choosing which mismatches you can live with at a given site.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Composite</span><span class="t-tag">Tooth-like, but restless</span>
+<div class="kv"><span class="k">Modulus</span><span class="v">Near dentin</span></div>
+<div class="kv"><span class="k">Esthetics</span><span class="v">Excellent</span></div>
+<div class="kv"><span class="k">Thermal</span><span class="v">Expands 2 to 4x more</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Zirconia</span><span class="t-tag">Strong, but stiff and hard</span>
+<div class="kv"><span class="k">Strength</span><span class="v">Very high</span></div>
+<div class="kv"><span class="k">Modulus</span><span class="v">~205 GPa, far above</span></div>
+<div class="kv"><span class="k">Wear risk</span><span class="v">Hard on opposing tooth</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Where this goes</div><div class="ct">Amalgam is durable but expands and cannot be hidden; ceramics match color and thermal expansion but are brittle; zirconia is strong but stiff and hard. <b>The tooth is still the only material that gets every property right,</b> which is why we match, not replace.</div></div></div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part Six</div>
+<div class="sec-title reveal d2">How Teeth and Restorations <em>Fail</em></div>
+<div class="sec-sub reveal d3">Every property so far decides one thing: how long the tooth and its restoration survive. Failure comes four ways, and each leaves a signature you can read at the chair.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Failure Modes <span class="kt">The Four Routes</span></div>
+<div class="c-title reveal d2">Four Ways It <em>Breaks Down</em></div>
+<div class="c-lead reveal d2" style="margin-bottom:14px">Fracture and fatigue are mechanical, wear is surface loss, and chemical degradation is dissolution. Each maps to a property you have already met, and to a clinical presentation, though the routes overlap: abrasive wear can lower the force that starts a fatigue crack (Kruzic 2023).</div>
+<div class="panel reveal d3" style="padding:14px 22px;width:100%;max-width:960px">
+<table class="dsheet">
+<thead><tr><th>Mode</th><th>Driven by</th><th>Clinical presentation</th></tr></thead>
+<tbody>
+<tr><td class="p">Fracture</td><td class="m">Low toughness, overload</td><td>Cusp fracture, cracked tooth, chipping</td></tr>
+<tr><td class="p">Fatigue</td><td class="m">Cyclic load over years</td><td>Fracture with no single traumatic event</td></tr>
+<tr><td class="p">Wear</td><td class="m">Hardness, contact, acids</td><td>Flattened cusps, cervical notches, cupping</td></tr>
+<tr><td class="p">Chemical</td><td class="m">Acid dissolution, degradation</td><td>White-spot lesions, cavitation, softening</td></tr>
+</tbody>
+</table>
+</div>
+<div class="src reveal d4">This is the payoff of the property sections: toughness governs fracture, the fatigue limit governs fatigue, hardness governs wear, and solubility governs chemical breakdown.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Failure Modes <span class="kt">Mechanical</span></div>
+<div class="c-title reveal d2">Fracture Is Sudden, Fatigue Is <em>Patient</em></div>
+<div class="c-lead reveal d2">A tooth can fail from one overload that exceeds its toughness, or from thousands of small loads that grow a crack too slowly to notice, until it runs. The second is why teeth crack years after a large restoration, with no single traumatic bite.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Fracture</span><span class="t-tag">Overload, one event</span>
+<div class="kv"><span class="k">Governed by</span><span class="v">Fracture toughness</span></div>
+<div class="kv"><span class="k">Enamel</span><span class="v">0.5 to 1.3 MPa&middot;m&frac12;</span></div>
+<div class="kv"><span class="k">Presents as</span><span class="v">Cusp fracture, cracked tooth</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Fatigue</span><span class="t-tag">Cyclic, over years</span>
+<div class="kv"><span class="k">Dentin fatigue limit</span><span class="v">~30 MPa</span></div>
+<div class="kv"><span class="k">Above it</span><span class="v">0.3 mm flaw grows to failure</span></div>
+<div class="kv"><span class="k">Presents as</span><span class="v">Delayed, unexplained fracture</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">A tooth sees millions of chewing cycles, so a restoration must survive <b>fatigue, not just a single bite</b>. Preserve toughening structure, keep the dentin support, and avoid stress risers at internal line angles. (Kinney 2003)</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Failure Modes <span class="kt">Wear</span></div>
+<div class="c-title reveal d2">Three Ways a Surface <em>Wears</em></div>
+<div class="c-lead reveal d2">Wear is the slow loss of surface, and it tracks hardness and the chemical environment. It comes in three forms, each with its own pattern, and a fourth mechanism that is still debated.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Mechanical wear</span><span class="t-tag">Contact loss</span>
+<div class="kv"><span class="k">Attrition</span><span class="v">Tooth against tooth</span></div>
+<div class="kv"><span class="k">Abrasion</span><span class="v">Tooth against an object</span></div>
+<div class="kv"><span class="k">Pattern</span><span class="v">Facets, cervical notches</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Chemical and mixed</span><span class="t-tag">Dissolution</span>
+<div class="kv"><span class="k">Erosion</span><span class="v">Acid, non-bacterial</span></div>
+<div class="kv"><span class="k">Pattern</span><span class="v">Smooth, cupped lesions</span></div>
+<div class="kv"><span class="k">Abfraction</span><span class="v">Stress-related, debated</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Clinical relevance</div><div class="ct">Because enamel is the wear reference, a restorative should <b>wear at about enamel's rate</b>. Harder ceramics can abrade the opposing tooth; softer materials wear away themselves. Erosion softens the surface first, then normal function removes it.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Failure Modes <span class="kt">Chemical</span></div>
+<div class="c-title reveal d2">Demineralization and <em>Remineralization</em></div>
+<div class="c-lead reveal d2">The tooth mineral is carbonated and calcium-deficient, so it dissolves in acid. Below a critical pH near 5.5, plaque acids strip mineral out; saliva and fluoride can put it back. Caries is the balance between the two.</div>
+<div class="grid2 reveal d3">
+<div class="tissue de"><span class="t-name">Demineralization</span><span class="t-tag">Mineral out</span>
+<div class="kv"><span class="k">Trigger</span><span class="v">Plaque acids</span></div>
+<div class="kv"><span class="k">Critical pH, enamel</span><span class="v">~5.5</span></div>
+<div class="kv"><span class="k">Mineral lost</span><span class="v">Carbonated apatite</span></div>
+<div class="kv"><span class="k">Presents as</span><span class="v">White spot, then cavity</span></div>
+</div>
+<div class="tissue en"><span class="t-name">Remineralization</span><span class="t-tag">Mineral back</span>
+<div class="kv"><span class="k">Drivers</span><span class="v">Saliva Ca and P, fluoride</span></div>
+<div class="kv"><span class="k">New veneer</span><span class="v">Excludes carbonate</span></div>
+<div class="kv"><span class="k">Composition</span><span class="v">Between HAP and FAP</span></div>
+<div class="kv"><span class="k">Solubility</span><span class="v">Lower than before</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">Get the chemistry right</div><div class="ct">Fluoride does not make pure fluorapatite. It drives a carbonate-excluding, <b>fluorapatite-like</b> apatite whose composition sits between hydroxyapatite and fluorapatite, and at high concentrations it forms calcium fluoride reservoirs that release fluoride when the pH drops. Pure fluorapatite would carry about 38,000 ppm (3.8%) fluoride. (Featherstone)</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">After the Pulp Is Gone</div>
+<div class="c-title reveal d2">The Endodontically Treated <em>Tooth</em></div>
+<div class="c-lead reveal d2">The classic teaching is that a root canal dries the dentin and makes it brittle. The measured picture is more specific, and more useful at the chair.</div>
+<div class="myth reveal d3">
+<div class="myth-card assume">
+<div class="ml">The old story</div>
+<div class="mh">Dried and brittle</div>
+<div class="mp">Take out the pulp.</div>
+<div class="mp">The dentin dehydrates.</div>
+<div class="mp">The tooth turns brittle and snaps.</div>
+</div>
+<div class="myth-card real">
+<div class="ml">The measured reality</div>
+<div class="mh">Structure, not moisture</div>
+<div class="mp">Moisture loss is small and the modulus barely moves.</div>
+<div class="mp">What fails is the hollowed, weakened tooth.</div>
+<div class="mp">And the dentin can no longer repair itself.</div>
+</div>
+</div>
+<div class="pgrid reveal d4">
+<div class="pcard"><div class="pk">Lost structure</div><div class="pd">The access cavity, caries, old fillings, and missing marginal ridges remove the stiff walls that resisted flexure. This is the main fracture driver.</div></div>
+<div class="pcard"><div class="pk">No feedback</div><div class="pd">Without a vital pulp the tooth loses its proprioceptive warning, so it gets loaded harder, without the reflex that used to protect it.</div></div>
+<div class="pcard"><div class="pk">Altered matrix</div><div class="pd">Sodium hypochlorite degrades dentin collagen and lowers its flexural strength and modulus. EDTA strips mineral. The irrigants change the matrix. <span class="src-tag">(Craig's)</span></div></div>
+</div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner">
+<div class="sec-kick reveal d2">Part Seven</div>
+<div class="sec-title reveal d2">Selecting and Designing the <em>Restoration</em></div>
+<div class="sec-sub reveal d3">This is the point of the whole lecture. With the tissue benchmark and the failure modes in hand, you can reason from the demands of a site to the material that fits it.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Selection <span class="kt">The Framework</span></div>
+<div class="c-title reveal d2">Match the Site to the <em>Property</em></div>
+<div class="c-lead reveal d2">Every site poses a set of demands. Read them off the tooth, then pick the material that comes closest on the properties that matter most there, accepting the mismatches you can manage.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Read the demands</span><span class="t-tag">From the site</span>
+<div class="kv"><span class="k">Load</span><span class="v">Occlusal force, direction</span></div>
+<div class="kv"><span class="k">Esthetic zone</span><span class="v">Visible or not</span></div>
+<div class="kv"><span class="k">Remaining tissue</span><span class="v">Enamel and dentin support</span></div>
+<div class="kv"><span class="k">Caries risk</span><span class="v">High or low</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Match the property</span><span class="t-tag">From the benchmark</span>
+<div class="kv"><span class="k">Stiffness</span><span class="v">Modulus near the tooth</span></div>
+<div class="kv"><span class="k">Thermal</span><span class="v">CTE near 8 to 11 ppm</span></div>
+<div class="kv"><span class="k">Wear</span><span class="v">Around enamel, not above</span></div>
+<div class="kv"><span class="k">Esthetics</span><span class="v">Translucency and fluorescence</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">The principle</div><div class="ct">No material wins every axis, so selection is <b>ranking the demands of the site</b> and matching the properties that matter most there, while managing the ones you cannot.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Selection <span class="kt">Worked Choices</span></div>
+<div class="c-title reveal d2">From Benchmark to <em>Choice</em></div>
+<div class="c-lead reveal d2" style="margin-bottom:14px">The same reasoning, applied to common sites. These are leading options with trade-offs, not the only answers, but each rationale traces to a property you have measured.</div>
+<div class="panel reveal d3" style="padding:14px 22px;width:100%;max-width:980px">
+<table class="dsheet">
+<thead><tr><th>Clinical situation</th><th>Leading option</th><th>Rationale from the benchmark</th></tr></thead>
+<tbody>
+<tr><td class="p">Small to moderate cavity</td><td class="m">Bonded composite</td><td>Modulus near dentin, esthetic, conservative</td></tr>
+<tr><td class="p">Large posterior crown</td><td class="m">Lithium disilicate or zirconia</td><td>Strength and fatigue resistance for occlusal load</td></tr>
+<tr><td class="p">Anterior veneer or crown</td><td class="m">Glass-ceramic</td><td>Matches enamel translucency and fluorescence</td></tr>
+<tr><td class="p">Cervical or root lesion</td><td class="m">Glass ionomer</td><td>Bonds to dentin, releases fluoride, low stress</td></tr>
+<tr><td class="p">Heavy bruxer</td><td class="m">Polished monolithic zirconia or gold</td><td>Survives high cyclic load; polish spares the opposing tooth</td></tr>
+</tbody>
+</table>
+</div>
+<div class="src reveal d4">Each choice ranks the site's dominant demand: esthetics anteriorly, load and fatigue posteriorly, chemistry at the root. The benchmark is what makes the rationale defensible.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Intraradicular Retention</div>
+<div class="c-title reveal d2">A Post <em>Retains.</em> It Does Not Reinforce.</div>
+<div class="c-lead reveal d2">When too little coronal tooth remains, a post anchors the core inside the root. It adds no strength to the root itself, so the aim is to match the root, not to out stiffen it.</div>
+<table class="dsheet posts reveal d3" style="margin-top:14px">
+<thead><tr><th>Post type</th><th>Elastic modulus</th><th>In the root</th></tr></thead>
+<tbody>
+<tr><td>Cast or prefabricated metal</td><td><span class="gpa">100 to 200 GPa</span></td><td>Far stiffer than dentin. Concentrates stress and tends to fail as a vertical root fracture, often unrestorable.</td></tr>
+<tr><td>Zirconia ceramic</td><td><span class="gpa">about 205 GPa</span></td><td>Strong and esthetic, but very rigid, hard to retrieve, and carries a similar root fracture risk.</td></tr>
+<tr class="row-pick"><td>Fiber, glass or quartz, in resin</td><td><span class="gpa">20 to 40 GPa</span></td><td>Close to dentin, so load spreads evenly. When it does fail it tends to debond, which is repairable.</td></tr>
+</tbody>
+</table>
+<div class="callout reveal d4"><div><div class="cl">The modulus rule</div><div class="ct">Dentin sits near <em>18 to 25 GPa</em>. The closer a post sits to that number, the more root and post flex together, and the less the root is driven to split.</div></div></div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner">
+<div class="kicker reveal d1">Design <span class="kt">Beyond the Material</span></div>
+<div class="c-title reveal d2">The Material Is Not <em>Enough</em></div>
+<div class="c-lead reveal d2">Choosing well is half of it. How you prepare, bond, and shape the restoration decides whether it behaves like the tissue it replaces.</div>
+<div class="grid2 reveal d3">
+<div class="tissue en"><span class="t-name">Restore the structure</span><span class="t-tag">Load path</span>
+<div class="kv"><span class="k">Dentin support</span><span class="v">Keep it, cover weak cusps</span></div>
+<div class="kv"><span class="k">Adhesion</span><span class="v">Reconnect the layers</span></div>
+<div class="kv"><span class="k">Internal angles</span><span class="v">Round, avoid stress risers</span></div>
+</div>
+<div class="tissue de"><span class="t-name">Protect the interface</span><span class="t-tag">Longevity</span>
+<div class="kv"><span class="k">Margins</span><span class="v">Seal against microleakage</span></div>
+<div class="kv"><span class="k">Thermal and shrinkage</span><span class="v">Manage the mismatch</span></div>
+<div class="kv"><span class="k">Occlusion</span><span class="v">Balance the contacts</span></div>
+</div>
+</div>
+<div class="callout reveal d4"><div><div class="cl">The design goal</div><div class="ct">A restoration succeeds when it <b>rebuilds the tooth's load path and seals its margins</b>, so a stiff shell rides on supported dentin and the interface does not leak. Material choice plus sound design, together.</div></div></div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner ctr">
+<div class="sec-kick reveal d1">In Closing</div>
+<div class="sec-title reveal d2" style="max-width:960px">Know the Tooth <em>to</em> Restore It</div>
+<div class="sec-sub reveal d3" style="max-width:760px">Structure sets the properties, the properties set the performance, and the performance sets the choice. Enamel and dentin are the specification every material is measured against, and the tooth is still the only one that gets every property right. That is why we match, and never simply replace.</div>
+</div></section>
+<section class="slide"><div class="chrome-top"></div><div class="event-ribbon">RSDM 5511 <span class="dot"></span> Dental Materials</div><div class="slide-inner slide-inner--rr">
+<div class="kicker reveal d1">The Reading Room</div>
+<div class="c-title reveal d2">Read the <em>Sources</em></div>
+<div class="rr reveal d3">
+<div class="rr-chips" id="chips">
+<div class="rr-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg><input id="q" type="text" placeholder="Search titles"></div>
+</div>
+<div class="rr-body">
+<div class="rr-list" id="list"></div>
+<div class="rr-view">
+<a class="rr-open" id="open" href="#" target="_blank" rel="noopener">Open in new tab</a>
+<iframe id="pdf" title="Reader"></iframe>
+<div class="rr-empty" id="empty">
+<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+<div class="e1">Choose a source to read</div>
+<div class="e2">Tap any manuscript and it opens in this panel, no download needed.</div>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<section class="slide slide--navy"><div class="chrome-top"></div><div class="slide-inner"><div class="closing-kicker reveal d1">RSDM 5511 &middot; Dental Materials</div><h2 class="closing-title reveal d2">Muito obrigado</h2><div class="closing-line reveal d3"></div><div class="closing-meta reveal d4"><div class="cm-block"><span class="cm-label">Course Director</span><span class="cm-value">Rafael Rocha Pacheco, DDS, MSc, PhD</span></div><div class="cm-block"><span class="cm-label">Contact</span><span class="cm-value">RAPACHECO@augusta.edu</span></div></div></div></section>
+
+<nav class="nav-controls"><button class="nav-btn" id="prev">&larr;</button><div class="nav-dots" id="dots"></div><span class="nav-counter"><span class="current" id="counter-current">01</span> / <span id="counter-total">53</span></span><button class="nav-btn" id="next">&rarr;</button></nav>
+<button class="fs-btn" id="fullscreen" title="Fullscreen"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 9 4 4 9 4"></polyline><polyline points="15 4 20 4 20 9"></polyline><polyline points="20 15 20 20 15 20"></polyline><polyline points="9 20 4 20 4 15"></polyline></svg></button>
+<button class="theme-btn" id="theme-toggle" title="Toggle dark mode"><svg class="moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></button>
+
+<script>
+(function(){
+  var data=[
+    {kind:'Mechanical property',ratio:'Enamel \u2248 4\u00d7 stiffer',win:'e',word:'Stiffer',eN:80,eU:'GPa',dN:20,dU:'GPa',eBar:100,dBar:25,dec:0,fh:'Feels like',fE:'Aluminium',fEs:'~70 GPa',fD:'Bone',fDs:'~18 GPa',cl:'Clinical relevance',ct:'Stiff enamel rides on the more flexible dentin beneath it. Remove that support and enamel flexes past its limit and chips, which is why a preparation keeps a sound <b>dentin floor</b> and undermined cusps get covered.'},
+    {kind:'Mechanical property',ratio:'Enamel \u2248 5\u00d7 harder',win:'e',word:'Harder',eN:350,eU:'KHN',dN:70,dU:'KHN',eBar:100,dBar:20,dec:0,fh:'Feels like',fE:'Window glass',fEs:'Mohs ~5',fD:'Copper coin',fDs:'Mohs ~3',cl:'Clinical relevance',ct:'Enamel is the hardest tissue in the body and built to resist wear. Put a material harder than enamel against it and you wear down the <b>opposing natural tooth</b> instead, so wear resistance is matched to enamel, not pushed past it.'},
+    {kind:'Mechanical property',ratio:'Dentin \u2248 3\u00d7 tougher',win:'d',word:'Tougher',eN:0.9,eU:'MPa\u00b7m\u00bd',dN:3.0,dU:'MPa\u00b7m\u00bd',eBar:30,dBar:100,dec:1,fh:'Feels like',fE:'Ceramic plate',fEs:'shatters',fD:'Cutting board',fDs:'dents, holds',cl:'Clinical relevance \u00b7 the ranking flips',ct:'Here dentin wins. It arrests the cracks that brittle enamel starts, so <b>harder is not tougher</b>. A rigid restoration with nothing to stop a crack fails at the margin the same way unsupported enamel does.'},
+    {kind:'Physical property \u00b7 thermal expansion',ratio:'Most fillings expand 2 to 4\u00d7 more',win:'x',word:'',eN:11.4,eU:'ppm/\u00b0C',dN:8.3,dU:'ppm/\u00b0C',eBar:100,dBar:73,dec:1,fh:'Compare',fE:'Tooth',fEs:'8 to 11 ppm',fD:'Composite',fDs:'14 to 50 ppm',cl:'Clinical relevance',ct:'Enamel and dentin barely expand when you sip something hot. Most filling materials move two to four times more, so every hot and cold cycle works the bond loose at the margin. That slow pumping, called percolation, is what drives <b>marginal stain, sensitivity, and recurrent caries</b>.'}
+  ];
+  var $=function(id){return document.getElementById(id);};if(!$('seg'))return;
+  var thumb=$('segThumb'),btns=document.querySelectorAll('.seg-btn');var lastE=80,lastD=20,cur=-1;
+  function animNum(el,from,to,dec,dur){var t0=performance.now();function f(t){var p=Math.min((t-t0)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=(from+(to-from)*e).toFixed(dec);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+  function paintText(d){$('axKind').textContent=d.kind;$('axRatio').innerHTML=d.ratio;$('feelH').textContent=d.fh;$('feelE').textContent=d.fE;$('feelEsub').textContent=d.fEs;$('feelD').textContent=d.fD;$('feelDsub').textContent=d.fDs;$('cLabel').textContent=d.cl;$('cText').innerHTML=d.ct;}
+  function go(i,animate){if(i===cur)return;var d=data[i];thumb.style.transform='translateX('+(i*100)+'%)';btns.forEach(function(b,j){b.classList.toggle('active',j===i);});
+    if(animate){['axKind','axRatio','axFeel','axClin'].forEach(function(id){$(id).style.opacity='0';});setTimeout(function(){paintText(d);['axKind','axRatio','axFeel','axClin'].forEach(function(id){$(id).style.opacity='';});},150);animNum($('eNum'),lastE,d.eN,d.dec,600);animNum($('dNum'),lastD,d.dN,d.dec,600);}else{paintText(d);$('eNum').textContent=d.eN.toFixed(d.dec);$('dNum').textContent=d.dN.toFixed(d.dec);}
+    $('eUnit').textContent=d.eU;$('dUnit').textContent=d.dU;$('pillE').textContent=d.word;$('pillD').textContent=d.word;$('tileE').classList.toggle('win',d.win==='e');$('tileD').classList.toggle('win',d.win==='d');
+    var cs=getComputedStyle(document.documentElement);var g=cs.getPropertyValue('--au-green').trim();var ns=cs.getPropertyValue('--au-navy-soft').trim();
+    $('fillE').style.width=d.eBar+'%';$('fillE').style.background=(d.win==='e')?g:ns;$('fillD').style.width=d.dBar+'%';$('fillD').style.background=(d.win==='d')?g:ns;lastE=d.eN;lastD=d.dN;cur=i;}
+  window.__introGo=go;
+  btns.forEach(function(b){b.addEventListener('click',function(){go(parseInt(b.getAttribute('data-i')),true);});});
+  var opts=document.querySelectorAll('.qz-opt'),fb=$('qzFb');
+  opts.forEach(function(o){o.addEventListener('click',function(){opts.forEach(function(x){x.classList.remove('correct','wrong');});var right=o.getAttribute('data-c')==='1';opts.forEach(function(x){if(x.getAttribute('data-c')==='1')x.classList.add('correct');});if(right){fb.innerHTML='<b>Correct.</b> Dentin is about 3\u00d7 tougher. Harder is not tougher, and that is why dentin stops the cracks enamel starts.';}else{o.classList.add('wrong');fb.innerHTML='<b>Not quite.</b> Enamel wins stiffness, hardness, and thermal expansion. Only <b>toughness</b> is higher for dentin.';}fb.classList.add('show');setTimeout(function(){go(2,true);},260);});});
+  setTimeout(function(){go(0,false);},220);
+})();
+
+/* composition chart */
+(function(){
+  var DATA={volume:{em:92,eo:2,ew:6,dm:50,do:30,dw:20},weight:{em:96,eo:1,ew:3,dm:70,do:20,dw:10}};
+  var basis='volume',rendered=false;var ids=['em','eo','ew','dm','do','dw'];
+  var cs=getComputedStyle(document.documentElement);
+  var colorOf={m:'#FFFFFF',o:cs.getPropertyValue('--au-green-deep').trim(),w:cs.getPropertyValue('--au-navy').trim()};
+  function render(){var d=DATA[basis];ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var v=d[id];el.style.width=v+'%';var sv=el.querySelector('.comp-sv');sv.textContent=v+'%';if(v>=10)el.classList.add('show');else el.classList.remove('show');});}
+  var chart=document.getElementById('compChart'),readout=document.getElementById('compReadout');if(!chart)return;
+  ids.forEach(function(id){var el=document.getElementById(id);
+    el.addEventListener('mouseenter',function(){show(el);});el.addEventListener('click',function(){show(el);});el.addEventListener('mouseleave',clear);});
+  function show(el){chart.classList.add('dim');ids.forEach(function(x){document.getElementById(x).classList.remove('hot');});el.classList.add('hot');
+    var d=DATA[basis];var k=el.getAttribute('data-k');var nm=el.getAttribute('data-n'),t=el.getAttribute('data-t');
+    readout.innerHTML='<span class="rdot" style="background:'+colorOf[k]+'"></span><span><b>'+t+'</b> &middot; '+nm+' &middot; <b>'+d[el.id]+'%</b> by '+basis+'</span>';}
+  function clear(){chart.classList.remove('dim');ids.forEach(function(x){document.getElementById(x).classList.remove('hot');});readout.innerHTML='<span class="rhint">Hover or tap any band to read its exact share.</span>';}
+  var cbtns=document.querySelectorAll('.comp-b'),cthumb=document.getElementById('compThumb');
+  cbtns.forEach(function(b,i){b.addEventListener('click',function(){basis=b.getAttribute('data-b');cbtns.forEach(function(x){x.classList.remove('active');});b.classList.add('active');cthumb.style.transform='translateX('+(i*100)+'%)';render();clear();});});
+  window.__compRender=function(){if(!rendered){rendered=true;render();}};
+})();
+
+
+
+/* deck navigation + clickable objectives */
+(function(){
+  let current=0;const slides=document.querySelectorAll('.slide'),dotsEl=document.getElementById('dots'),curEl=document.getElementById('counter-current'),totEl=document.getElementById('counter-total');
+  function buildDots(){dotsEl.innerHTML='';slides.forEach((_,i)=>{const d=document.createElement('button');d.className='nav-dot'+(i===current?' active':'');d.addEventListener('click',()=>goTo(i));dotsEl.appendChild(d)});totEl.textContent=String(slides.length).padStart(2,'0');curEl.textContent=String(current+1).padStart(2,'0')}
+  function goTo(idx){if(idx<0||idx>=slides.length||idx===current)return;const out=slides[current],inc=slides[idx];out.classList.remove('active');out.classList.add('prev');inc.classList.add('active','entering');void inc.offsetWidth;inc.classList.remove('entering');if(inc.querySelector('#compChart')&&window.__compRender)window.__compRender();setTimeout(()=>out.classList.remove('prev'),520);dotsEl.querySelectorAll('.nav-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));current=idx;curEl.textContent=String(current+1).padStart(2,'0')}
+  slides[0].classList.add('active');buildDots();
+  document.querySelectorAll('.obj[data-goto]').forEach(function(o){o.addEventListener('click',function(){goTo(parseInt(o.getAttribute('data-goto'))-1);});});
+  document.getElementById('prev').addEventListener('click',()=>goTo(current-1));
+  document.getElementById('next').addEventListener('click',()=>goTo(current+1));
+  document.getElementById('fullscreen').addEventListener('click',()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()});
+  document.getElementById('theme-toggle').addEventListener('click',()=>{document.body.classList.toggle('dark')});
+  document.addEventListener('keydown',e=>{if(document.getElementById('qpwModal')&&document.getElementById('qpwModal').classList.contains('open'))return;if(e.key==='ArrowRight'||e.key==='PageDown'){goTo(current+1)}else if(e.key==='ArrowLeft'||e.key==='PageUp'){goTo(current-1)}else if(e.key==='Home'){goTo(0)}else if(e.key==='End'){goTo(slides.length-1)}else if(current===1&&e.key>='1'&&e.key<='4'&&window.__introGo){window.__introGo(parseInt(e.key)-1,true)}else if(e.key==='f'||e.key==='F'){if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()}});
+  let tx=0;document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>60){dx<0?goTo(current+1):goTo(current-1)}},{passive:true});
+})();
+document.querySelectorAll('.flip-card').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('flipped');});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();c.classList.toggle('flipped');}});});
+</script>
+<script>
+/* ===== Reading Room: put these PDFs in the same folder as the deck (or set REFS_DIR) ===== */
+(function(){
+const REFS_DIR = "";
+const REFERENCES = [
+  { topic:"Enamel", title:"Elastic modulus and stress-strain response of human enamel by nano-indentation", source:"He et al., 2006", file:"Elastic modulus and stress-strain response of human enamel by nano-indentation.pdf" },
+  { topic:"Enamel", title:"Mechanical properties of human enamel as a function of age and location in the tooth", source:"Park et al., 2008", file:"Mechanical properties of human enamel as a function of age and location in the tooth.pdf" },
+  { topic:"Enamel", title:"Mechanical properties of human dental enamel on the nanometre scale", source:"Habelitz et al., 2001", file:"Mechanical properties of human dental enamel on the nanometre scale.pdf" },
+  { topic:"Enamel", title:"Nanoindentation mapping of the mechanical properties of human molar tooth enamel", source:"Cuy et al., 2002", file:"Nanoindentation mapping of the mechanical properties of human molar tooth enamel.pdf" },
+  { topic:"Enamel", title:"Enamel: a metallic-like deformable biocomposite", source:"He et al., 2007", file:"Enamel-A Metallic-Like deformable biocomposite.pdf" },
+  { topic:"Enamel", title:"On the brittleness of enamel and selected dental materials", source:"Park et al., 2008", file:"On the brittleness of enamel and selected dental materials.pdf" },
+  { topic:"Dentin", title:"Collagen orientation and crystallite size in human dentin: a small-angle X-ray scattering study", source:"Kinney et al., 2001", file:"Collagen Orientation and Crystallite Size in Human Dentin A Small Angle X-ray Scattering Study.pdf" },
+  { topic:"Dentin", title:"The importance of microstructural variations on the fracture toughness of human dentin", source:"Ivancik and Arola, 2013", file:"nihms415835.pdf" },
+  { topic:"Dentin", title:"The reduction in fatigue crack growth resistance of dentin with depth", source:"Ivancik et al., 2011", file:"10.1177_0022034511408429.pdf" },
+  { topic:"Dentin", title:"Contributions of microstructure and chemical composition to the mechanical properties of dentin", source:"Ryou et al., 2011", file:"nihms-298351.pdf" },
+  { topic:"The DEJ", title:"Mechanical properties of the dentinoenamel junction: AFM studies of nanohardness, elastic modulus, and fracture", source:"Marshall et al., 2001", file:"Journal of Biomedical Materials Research - 2000 - Marshall - Mechanical properties of the dentinoenamel junction  AFM.pdf" },
+  { topic:"The DEJ", title:"The functional width of the dentino-enamel junction determined by AFM-based nanoscratching", source:"Habelitz et al., 2001", file:"The functional width of the dentino-enamel junction determined by AFM-based nanoscratching.pdf" },
+  { topic:"Characterization", title:"Nanoindentation derived stress-strain properties of dental materials", source:"He et al., 2007", file:"Nanoindentation derived stress-strain properties of dental materials.pdf" },
+  { topic:"Caries & fluoride", title:"The science and practice of caries prevention", source:"Featherstone, 2000", file:"The Science and Practice of Caries Prevention.pdf" },
+];
+
+const TOPICS=["All",...Array.from(new Set(REFERENCES.map(r=>r.topic)))];
+const listEl=document.getElementById("list"), chipsEl=document.getElementById("chips"), qEl=document.getElementById("q");
+const pdf=document.getElementById("pdf"), empty=document.getElementById("empty"), openA=document.getElementById("open");
+if(!listEl||!chipsEl) return;
+let activeTopic="All", activeFile=null;
+
+TOPICS.forEach(t=>{
+  const c=document.createElement("div"); c.className="rr-chip"+(t==="All"?" on":""); c.textContent=t;
+  c.onclick=()=>{activeTopic=t;[...chipsEl.querySelectorAll(".rr-chip")].forEach(x=>x.classList.toggle("on",x.textContent===t));render();};
+  chipsEl.insertBefore(c, chipsEl.querySelector(".rr-search"));
+});
+
+function render(){
+  const q=qEl.value.trim().toLowerCase();
+  const items=REFERENCES.filter(r=>(activeTopic==="All"||r.topic===activeTopic)&&(!q||r.title.toLowerCase().includes(q)));
+  listEl.innerHTML=""; let last=null;
+  if(!items.length){listEl.innerHTML='<div class="rr-grp">No matches</div>';return;}
+  items.forEach(r=>{
+    if(r.topic!==last){const h=document.createElement("div");h.className="rr-grp";h.textContent=r.topic;listEl.appendChild(h);last=r.topic;}
+    const c=document.createElement("div"); c.className="rr-ref"+(activeFile===r.file?" on":"");
+    c.innerHTML='<div class="t">'+r.title+'</div><div class="a">'+r.source+'</div><span class="tag">'+r.topic+'</span>';
+    c.onclick=()=>openRef(r); listEl.appendChild(c);
+  });
+}
+function openRef(r){
+  activeFile=r.file;
+  const src=encodeURI(REFS_DIR+r.file)+"#view=FitH";
+  pdf.src=src; pdf.style.display="block"; empty.style.display="none";
+  openA.href=encodeURI(REFS_DIR+r.file); openA.style.display="block";
+  render();
+}
+qEl.addEventListener("input",render);
+render();
+})();
+</script>
+<div class="qpw-modal" id="qpwModal" role="dialog" aria-modal="true" aria-label="Quiz password" aria-hidden="true">
+<div class="qpw-modal-backdrop" data-qpw-close></div>
+<div class="qpw-modal-card">
+<div class="qpw-chrome"></div>
+<div class="qpw-body">
+<div class="qpw-ribbon">RSDM 5511 <span class="qpw-dot"></span> Dental Materials</div>
+<div class="qpw-gate" id="qpwGate">
+<div class="qpw-kicker">Instructor Access</div>
+<input class="qpw-gate-input" id="qpwInput" type="password" inputmode="numeric" autocomplete="off" placeholder="Enter password" aria-label="Enter password">
+<div class="qpw-gate-msg" id="qpwMsg" role="status"></div>
+<button class="qpw-gate-btn" id="qpwUnlock" type="button">Unlock</button>
+</div>
+<div class="qpw-reveal-state">
+<div class="qpw-kicker">Quiz Password</div>
+<div class="qpw-modal-code">K3MPa</div>
+<button class="qpw-modal-hide" type="button" data-qpw-close>Hide</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+/* Quiz password modal: reveal button opens a gate; the correct code (4388) reveals the password; backdrop, Hide, or Esc close and reset */
+(function(){
+  var openBtn=document.getElementById('qpwBtn'),modal=document.getElementById('qpwModal');
+  if(!openBtn||!modal)return;
+  var card=modal.querySelector('.qpw-modal-card'),input=document.getElementById('qpwInput'),unlock=document.getElementById('qpwUnlock'),msg=document.getElementById('qpwMsg');
+  var CODE='4388';
+  function resetGate(){card.classList.remove('unlocked');if(input)input.value='';if(msg)msg.textContent='';}
+  function openModal(){resetGate();modal.classList.add('open');modal.setAttribute('aria-hidden','false');openBtn.setAttribute('aria-expanded','true');setTimeout(function(){if(input)input.focus();},280);}
+  function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');openBtn.setAttribute('aria-expanded','false');setTimeout(resetGate,320);}
+  function tryUnlock(){if(!input)return;if(input.value.trim()===CODE){if(msg)msg.textContent='';card.classList.add('unlocked');}else{if(msg)msg.textContent='Incorrect password. Try again.';input.value='';input.classList.remove('shake');void input.offsetWidth;input.classList.add('shake');input.focus();}}
+  openBtn.addEventListener('click',openModal);
+  if(unlock)unlock.addEventListener('click',tryUnlock);
+  if(input)input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();tryUnlock();}});
+  modal.querySelectorAll('[data-qpw-close]').forEach(function(el){el.addEventListener('click',closeModal);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+})();
+</script>
+</body>
+</html>
