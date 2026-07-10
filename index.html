@@ -409,12 +409,19 @@ body.dark .fp-lab,body.dark .fp-line b,body.dark .fp-tooth .tt-h b{color:#fff}
 .rr-open{position:absolute;top:12px;right:12px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:11px;color:var(--au-navy);background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:100px;padding:6px 12px;text-decoration:none;display:none;z-index:3}
 .rr-open:hover{border-color:var(--au-green);color:var(--au-green-deep)}
 /* ---- Slide 7: split layout, reserved media panel (toothdiagram.png) flush left ---- */
-.slide--split7 .split7-media{position:absolute;inset:0;overflow:hidden;z-index:0}
-.slide--split7 .split7-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.slide--split7 .split7-media{position:absolute;inset:auto auto 0 0;width:auto;height:84%;overflow:visible;z-index:0}
+.slide--split7 .split7-media img{width:auto;height:100%;object-fit:contain;object-position:left bottom;display:block}
 .slide--split7 .slide-inner{position:relative;z-index:1;width:auto;max-width:none;margin:0 0 0 44%;padding:46px 84px 74px 60px}
-.slide--split7 .grid2{grid-template-columns:1fr;gap:14px;max-width:680px}
+.slide--split7 .grid2{grid-template-columns:1fr;gap:12px;max-width:500px}
 .slide--split7 .c-lead{margin-bottom:14px}
-.slide--split7 .callout{margin-top:14px;max-width:680px}
+.slide--split7 .callout{margin-top:12px;max-width:500px}
+.slide--split7 .flip-card{height:176px}
+.slide--split7 .ff-title{font-size:clamp(18px,2.1vw,23px)}
+.slide--split7 .flip-front{padding:18px}
+.slide--split7 .flip-back{padding:12px 18px}
+.slide--split7 .fb-head{margin-bottom:4px;font-size:9px}
+.slide--split7 .map{padding:3px 0;font-size:12.5px}
+.slide--split7 .fb-note{margin-top:5px;font-size:11px;line-height:1.35}
 @media(max-width:1000px){.slide--split7 .split7-media{display:none}.slide--split7 .slide-inner{margin-left:0;padding:44px 22px 80px}}
 
 /* ---- Slide 14 hybrid: content + interactive 3D model ---- */
